@@ -42,34 +42,40 @@
 /*--------- Estilos Desktop ---------*/
 @media only screen and (min-device-width:1025px){
     
-    #nav-mobile-tablet ul { display: none;}
+    #nav-mobile-tablet, .search-filter, .polygon-title h1 {display: none;}
 
-    .search-filter, .polygon-title h1 {display: none;}
-
-    #nav-desktop {
-        display: block;
-        height: 100px;}
+    #nav-desktop {display: block;}
 
     #nav-desktop ul {
         display: flex;
+        flex-direction: row;
         justify-content: space-around;
     }
 
     #nav-desktop li {
-        margin: 2% 0 2% 0;
         list-style-type: none;
         font-family:'PT Serif';
-        font-size: 2em;
+        font-size: 1.6em;
+        text-transform: uppercase;
     }
 
-   #nav-desktop a {
-        text-decoration: none;
+    a {text-decoration: none; color:#F2E5D6;}
+    /*a:link Enlaces no visitados, a:visited Enlaces visitados, a:hover El usuario esta sobre el enlace, a:active Enlaces activos */
+    a:hover {color: #B48030;}
+    a:active {color: red;}
+    
+    #nav-desktop .home-play {padding-top:10px}
+    
+    #nav-desktop .champions-rails {
+        padding-top: 30px;
+        padding-bottom: 10px;
     }
 
-    .champions-rails {
-        margin-top: 45px;
-        color: chartreuse;;
-    }
+    .title-page-desktop {display: block;}
+    h1.title-page-desktop {font-size: 2.3em;}
+    p.title-page-desktop {font-size: 1.5em; padding-top: 0.5%;}
+    
+    .card-champions {padding: 3% 0 15% 0;}
 
    /* .search-filter-desktop {
         display:flex;
