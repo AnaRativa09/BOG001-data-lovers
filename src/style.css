@@ -50,7 +50,7 @@ header {
     padding: 8% 0 1% 0;
 }
 
- .search-filter-desktop, #nav-desktop, .title-page-desktop {display: none;}
+ .search-filter-desktop, #nav-desktop, .title-page-desktop, .imageL {display: none;}
 
 /*--------- Estilos Search + Filter ---------*/
 .search-filter {
@@ -108,7 +108,7 @@ header {
 
 .name-title-container {
     width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0)50%);
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0) 60%);
 }
  
 .name-title-container h2 {

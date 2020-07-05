@@ -44,6 +44,12 @@
     
     #nav-mobile-tablet, .search-filter, .polygon-title h1 {display: none;}
 
+    .logo-Lol {
+        width: 20%;
+        height: 20%;
+        padding: 2% 6% 2% 0;
+    }
+    
     #nav-desktop {display: block;}
 
     #nav-desktop ul {
@@ -71,38 +77,90 @@
         padding-bottom: 10px;
     }
 
+    #championsPage{padding: 2%;}
+
     .title-page-desktop {display: block;}
     h1.title-page-desktop {font-size: 2.3em;}
     p.title-page-desktop {font-size: 1.5em; padding-top: 0.5%;}
     
-    .card-champions {padding: 3% 0 15% 0;}
-}
-   /* .search-filter-desktop {
-        display:flex;
-        flex-direction: column; 
-        margin-left: 3%;
-        justify-content: space-evenly;
+    .title-page{position: relative;}
+
+    .imageL-container{
+       background: url("images/lolIconL.png") no-repeat;
+       display:block;
+       width: 65px;
+       height: 65px;
+       position: absolute;
+       background-position: center;
+       background-size: cover;
+       top: 15%;
+       left: 48%;
+    
+    .card-champions {padding: 0 0 0 0;width: 80%;}
+
+    .search-filter-cards{
+        display: flex;
+        margin: 2% 0;
+        justify-content: space-around;
     }
 
-    #championsPage{
-        display: flex;
+    .search-filter-desktop {
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 12%;    
     }
+
+    .filter-tags-desktop h2{color: #E9CA7B; font-size: 1.5em; }
+    .filter-tags-desktop div {color: #F2E5D6; font-size: 1em; }
+    
+    .filter-tags-desktop {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-family: 'Merriweather';
+        }
+    
+
+    .search-filter-desktop div {padding-bottom: 10%;} 
+       
+    .search-input, .filter-desktop {
+        border-style: solid;
+        background-color: rgba(242, 229, 214, 0.16);
+        border: 2px solid #523D24;
+        border-radius: 5px;
+        width: 200px;
+        height: 30px;
+        font-size:1em ;
+        color: #E9CA7B;
+        font-family: 'Merriweather';    
+    }  
+
+    .search-input::placeholder {
+        font-family: 'Merriweather';
+        color: #E9CA7B;
+        font-size: 1.2 em;
+        padding: 0 10%;
+    }
+
+    .card {
+        width:180px; 
+        min-height: 200px;
+        margin: 0 0 2% 2%;
+    } 
 
     .card-champions {
         overflow-y: scroll;
-        height: 500px;
+        height: 380px;
     }
     
-    .filter-tags-desktop{
-        display: flex;
-        flex-direction: column;
+    footer{
+        border-top: solid #cb954a; 
+        background-color:#0F151D;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 6%;
     }
-  
-    .card {
-        max-width:200px; 
-        max-height: 250px;
-        width: 20%;
-        height: 20%;
-        margin: 2% 1%;
-    }
-} */
+    
+}
