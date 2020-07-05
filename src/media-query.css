@@ -75,6 +75,21 @@
     h1.title-page-desktop {font-size: 2.3em;}
     p.title-page-desktop {font-size: 1.5em; padding-top: 0.5%;}
     
+    .title-page{position: relative;}
+
+    .imageL-container{
+       background: url("images/lolIconL.png") no-repeat;
+       display:block;
+       width: 65px;
+       height: 65px;
+       position: absolute;
+       background-position: center;
+       background-size: cover;
+       top: 15%;
+       left: 50%;
+    }
+
+
     .card-champions {padding: 3% 0 15% 0;}
 
    /* .search-filter-desktop {
@@ -104,5 +119,5 @@
         width: 20%;
         height: 20%;
         margin: 2% 1%;
-    }
-} */
+    }*/
+}
