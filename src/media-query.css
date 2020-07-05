@@ -1,5 +1,5 @@
 /*--------- Estilos Tablet ---------*/
-@media only screen and (min-device-width:768px) {
+@media only screen and (min-width:768px) {
 
     .title-page{background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0)50%);}
 
@@ -40,7 +40,7 @@
 }
 
 /*--------- Estilos Desktop ---------*/
-@media only screen and (min-device-width:1025px){
+@media only screen and (min-width:1025px){
     
     #nav-mobile-tablet, .search-filter, .polygon-title h1 {display: none;}
 
