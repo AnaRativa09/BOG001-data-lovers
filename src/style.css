@@ -108,7 +108,7 @@ header {
 
 .name-title-container {
     width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0)50%);
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0) 60%);
 }
  
 .name-title-container h2 {

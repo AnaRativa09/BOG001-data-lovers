@@ -39,9 +39,10 @@
       <section class="home-page"></section>
         
       <section id="championsPage">
+
         <h1 class="title-page-desktop">ELIGE A TU CAMPEÓN</h1>
         <p class="title-page-desktop">Descubre yo no se qué </p>
-        
+
         <div class="search-filter">
           <input type="text" placeholder="Search" class="search-input">
           <button class="search-btn"><i class="fas fa-search"></i></button>
@@ -60,27 +61,30 @@
           </select>
         </div> 
         
-       
-        <div class="search-filter-desktop">
-            <div class="search-desktop">
-              <input type="text"placeholder="search" >
-            </div>
+        <div class="search-filter-cards">
+          <div class="search-filter-desktop">
+            <input type="text"placeholder="🔎search" class="search-input">   
+            
             <select class="filter-desktop">
               <option>Order A-Z</option>
               <option>Order Z-A</option>
             </select>
             <div class="filter-tags-desktop">
               <h2>Roles</h2>
-              <input type="checkbox" name="Assassins" id="Assassins"><label for="Assassins">Assassins</label>
-              <input type="checkbox" name="Marksmen" id="Marksmen"><label for="Marksmen">Marksmen</label>
-              <input type="checkbox" name="Supports" id="Supports"><label for="Supports">Supports</label>
-              <input type="checkbox" name="Fighters" id="Fighters"><label for="Fighters">Fighters</label>
-              <input type="checkbox" name="Mages" id="Mages"><label for="Mages">Mages</label>
-              <input type="checkbox" name="Tanks" id="Tanks"><label for="Tanks">Tanks</label>
+              <div><input type="checkbox" name="Assassins" id="Assassins" ><label for="Assassins">Assassins</label></div>
+              <div><input type="checkbox" name="Marksmen" id="Marksmen"><label for="Marksmen">Marksmen</label></div>
+              <div><input type="checkbox" name="Supports" id="Supports"><label for="Supports">Supports</label></div>
+              <div><input type="checkbox" name="Fighters" id="Fighters"><label for="Fighters">Fighters</label></div>
+              <div><input type="checkbox" name="Mages" id="Mages"><label for="Mages">Mages</label></div>
+              <div><input type="checkbox" name="Tanks" id="Tanks"><label for="Tanks">Tanks</label></div>
             </div>
+          </div>
+          <section class="card-champions"></section>
         </div>
+       
+       
         
-       <section class="card-champions"></section>
+       
       </section>
 
       <section id="mapPage"></section>
@@ -107,6 +111,7 @@
           </li>
         </ul>
       </nav>
+      <nav id="nav-social-media"></nav>
     </footer>
 
     <script src="main.js" type="module"></script>
