@@ -20,24 +20,25 @@
             <nav id="nav-desktop">
               <ul>
                 <li class="home-play"><a href="#">Home</a></li>
-                <li class="champions-rails"><a href="#championsPage">Champions</a></li>
-                <!-- <li class="imageL"><img src="images/lolIconL.png" alt=""></li> -->
+                <li class="champions-rails"><a href="#">Champions</a></li>
                 <li class="champions-rails"><a href="#">Rails</a></li> 
-                <li class="home-play"><a href="#">Play</a></li>
+                <li class="home-play"><a href="#" target="_blank">Play</a></li>
               </ul>
             </nav>
-
             <h1>CHAMPIONS</h1>
           </div>
         </div>
-      </div>
-      
+        <div class="imageL-container"></div>
+      </div> 
     </header>
    
-    <main id=root >
+    <main id="root">
       <section class="home-page"></section>
         
-      <section id="championsPage">
+      <section id="champions-page">
+        <h1 class="title-page-desktop">CHOOSE YOUR CHAMPION</h1>
+        <p class="title-page-desktop">With more than 140 champions, you’ll find the perfect match for your playstyle.</p>
+
         <div class="search-filter">
           <input type="text" placeholder="Search" class="search-input">
           <button class="search-btn"><i class="fas fa-search"></i></button>
@@ -55,32 +56,30 @@
             <option>Tanks</option>
           </select>
         </div> 
-        <h1 class="title-page-desktop">ELIGE A TU CAMPEÓN</h1>
-        <p class="title-page-desktop">Descubre yo no se qué </p>
-       
-        <div class="search-filter-desktop">
-            <div class="search-desktop">
-              <input type="text"placeholder="search" >
-            </div>
+        
+        <div class="search-filter-cards">
+          <div class="search-filter-desktop">
+            <input type="text" placeholder="Search" class="search-input">   
+      
             <select class="filter-desktop">
               <option>Order A-Z</option>
               <option>Order Z-A</option>
             </select>
             <div class="filter-tags-desktop">
               <h2>Roles</h2>
-              <input type="checkbox" name="Assassins" id="Assassins"><label for="Assassins">Assassins</label>
-              <input type="checkbox" name="Marksmen" id="Marksmen"><label for="Marksmen">Marksmen</label>
-              <input type="checkbox" name="Supports" id="Supports"><label for="Supports">Supports</label>
-              <input type="checkbox" name="Fighters" id="Fighters"><label for="Fighters">Fighters</label>
-              <input type="checkbox" name="Mages" id="Mages"><label for="Mages">Mages</label>
-              <input type="checkbox" name="Tanks" id="Tanks"><label for="Tanks">Tanks</label>
+              <div><input type="checkbox" name="Assassins" id="Assassins"><label for="Assassins">Assassins</label></div>
+              <div><input type="checkbox" name="Marksmen" id="Marksmen"><label for="Marksmen">Marksmen</label></div>
+              <div><input type="checkbox" name="Supports" id="Supports"><label for="Supports">Supports</label></div>
+              <div><input type="checkbox" name="Fighters" id="Fighters"><label for="Fighters">Fighters</label></div>
+              <div><input type="checkbox" name="Mages" id="Mages"><label for="Mages">Mages</label></div>
+              <div><input type="checkbox" name="Tanks" id="Tanks"><label for="Tanks">Tanks</label></div>
             </div>
+          </div>
+          <section class="card-champions"></section>
         </div>
-        
-        <section class="card-champions"></section>
       </section>
 
-      <section id="mapPage"></section>
+      <section id="map-page"></section>
     </main>
     
     <footer>
@@ -102,6 +101,15 @@
            <img src="images/gameIcon.svg">
            <p>Play</p>
           </li>
+        </ul>
+      </nav>
+      <p>Made it by Alejandra Ibáñez y Ana Rátiva © 2020</p>
+      <nav id="nav-social-media">
+        <ul>
+          <li><a href="https://instagram.com/leagueoflegends?igshid=1oezjjx6bqd42" target="_blank"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="https://es-la.facebook.com/leagueoflegends/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="https://twitter.com/LeagueOfLegends?s=08" target="_blank"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="https://www.youtube.com/c/leagueoflegends" target="_blank"><i class="fab fa-youtube"></i></a></li>
         </ul>
       </nav>
     </footer>
