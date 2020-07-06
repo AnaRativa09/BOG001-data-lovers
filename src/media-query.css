@@ -52,7 +52,6 @@
 
     #nav-desktop ul {
         display: flex;
-        flex-direction: row;
         justify-content: space-around;
     }
 
@@ -66,7 +65,6 @@
     a {text-decoration: none; color:#F2E5D6;}
     /*a:link Enlaces no visitados, a:visited Enlaces visitados, a:hover El usuario esta sobre el enlace, a:active Enlaces activos */
     a:hover {color: #B48030;}
-    a:active {color: red;}
     
     #nav-desktop .home-play {padding-top:10px}
     
@@ -75,11 +73,11 @@
         padding-bottom: 10px;
     }
 
-    #champions-page{height: 100vh;}
+    #champions-page{height: 100vh;} /*[--> Para definir el alto según viewport]*/
 
     .title-page-desktop {display: block;}
     h1.title-page-desktop {font-size: 2.3em;}
-    p.title-page-desktop {font-size: 1.5em; padding-top: 0.5%;}
+    p.title-page-desktop {font-size: 1em; padding-top: 0.5%;}
     
     .title-page {position: relative;}
 
@@ -104,8 +102,19 @@
     .search-filter-desktop {
         display:flex;
         flex-direction: column;
-        justify-content: space-between;
-        width: 12%;   
+    }
+       
+    .search-input, .filter-desktop {
+        border-style: solid;
+        background-color: rgba(242, 229, 214, 0.16);
+        border: 2px solid #523D24;
+        border-radius: 5px;
+        width: 200px;
+        height: 30px;
+        font-size:1em ;
+        color: #E9CA7B;
+        font-family: 'Merriweather'; 
+        margin-bottom: 10%;   
     }
 
     .filter-tags-desktop h2 {color: #E9CA7B; font-size: 1.5em;}
@@ -117,27 +126,20 @@
         align-items: flex-start;
         font-family: 'Merriweather';
     }
-    
-    /* .search-filter-desktop div {padding-bottom: 10%;} */ 
-       
-    .search-input, .filter-desktop {
-        border-style: solid;
-        background-color: rgba(242, 229, 214, 0.16);
-        border: 2px solid #523D24;
-        border-radius: 5px;
-        width: 200px;
-        height: 30px;
-        font-size:1em ;
-        color: #E9CA7B;
-        font-family: 'Merriweather';    
-    }  
 
-    .search-input::placeholder {
-        font-family: 'Merriweather';
-        color: #E9CA7B;
-        font-size: 1.2 em;
-        padding: 0 10%;
-    }
+    /* input[type="checkbox"]:not(old) {
+        content: '';
+        width: 15px;
+        height: 15px;
+        border: 1px double black;
+        cursor: pointer;
+        vertical-align: top;
+        display: inline-block;
+        margin-right: 5px;
+     } */
+    
+    .search-filter-desktop div {padding-top: 5%;} 
+
 
     .card {
         width:180px; 
@@ -145,12 +147,11 @@
         margin: 0 0 2% 2%;
     } 
 
-
     .card-champions {
         padding: 0 0 0 0;
         width: 80%;
         overflow:auto;
-        height: 600px;       
+        height: 600px;  
     }
 
     .card-champions::-webkit-scrollbar{
@@ -170,25 +171,19 @@
         bottom: 0;
         width: 100%;
         height: 6%;
-       
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
     } 
     
-    #nav-social-media {display: block; margin-top: 1%;}
+    #nav-social-media {display: block;}
 
     #nav-social-media ul {
         display: flex;
-        justify-content:flex-end;
         list-style-type:none;
-        margin-right: 3%;
     }
     
-    #nav-social-media li {
-        padding: 0 1%;
-    }
-
-    #nav-social-media i {
-       font-size: 2em;
-       color: #F2E5D6;
-    }
+    #nav-social-media li {margin: 0 10%;}
+    #nav-social-media i {font-size: 2em;}
   
 }  
