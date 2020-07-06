@@ -1,10 +1,9 @@
 /*--------- Estilos Tablet ---------*/
-@media only screen and (min-width:768px) {
+@media only screen and (min-width:768px){
 
-    .title-page{background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0)50%);}
+    .title-page {background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0)50%);}
 
     .polygon-title {clip-path: polygon(0 4%, 20% 4%, 25% 29%, 75% 29%, 80% 4%, 100% 4%, 100% 71%, 80% 71%, 75% 96%, 25% 96%, 20% 71%, 0 71%);} 
-    
     .polygon-title-border {clip-path: polygon(0 0, 20% 0, 25% 25%, 75% 25%, 80% 0, 100% 0, 100% 75%, 80% 75%, 75% 100%, 25% 100%, 20% 75%, 0 75%);}
 
     .polygon-title h1 {
@@ -12,7 +11,7 @@
         padding: 3% 0 1% 0;
     }
     
-    #championsPage {padding: 3%;}
+    #champions-page {padding: 3%;}
     
     .search-filter {
        width: 80%;
@@ -35,7 +34,6 @@
     }
     
     #nav-mobile-tablet li {font-size: 1.1em;}
-    
     #nav-mobile-tablet ul {height: 7%;}
 }
 
@@ -45,8 +43,8 @@
     #nav-mobile-tablet, .search-filter, .polygon-title h1 {display: none;}
 
     .logo-Lol {
-        width: 20%;
-        height: 20%;
+        width: 15%;
+        height: 15%;
         padding: 2% 6% 2% 0;
     }
     
@@ -77,15 +75,15 @@
         padding-bottom: 10px;
     }
 
-    #championsPage{padding: 2%;}
+    #champions-page{padding: 2%;}
 
     .title-page-desktop {display: block;}
     h1.title-page-desktop {font-size: 2.3em;}
     p.title-page-desktop {font-size: 1.5em; padding-top: 0.5%;}
     
-    .title-page{position: relative;}
+    .title-page {position: relative;}
 
-    .imageL-container{
+    .imageL-container {
        background: url("images/lolIconL.png") no-repeat;
        display:block;
        width: 65px;
@@ -95,10 +93,11 @@
        background-size: cover;
        top: 15%;
        left: 48%;
+    }
     
     .card-champions {padding: 0 0 0 0;width: 80%;}
 
-    .search-filter-cards{
+    .search-filter-cards {
         display: flex;
         margin: 2% 0;
         justify-content: space-around;
@@ -111,17 +110,16 @@
         width: 12%;    
     }
 
-    .filter-tags-desktop h2{color: #E9CA7B; font-size: 1.5em; }
-    .filter-tags-desktop div {color: #F2E5D6; font-size: 1em; }
+    .filter-tags-desktop h2 {color: #E9CA7B; font-size: 1.5em;}
+    .filter-tags-desktop div {color: #F2E5D6; font-size: 1em;}
     
     .filter-tags-desktop {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         font-family: 'Merriweather';
-        }
+    }
     
-
     .search-filter-desktop div {padding-bottom: 10%;} 
        
     .search-input, .filter-desktop {
@@ -154,7 +152,7 @@
         height: 380px;
     }
     
-    footer{
+    footer {
         border-top: solid #cb954a; 
         background-color:#0F151D;
         position: fixed;
@@ -162,5 +160,4 @@
         width: 100%;
         height: 6%;
     }
-    
 }

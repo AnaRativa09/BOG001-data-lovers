@@ -124,7 +124,7 @@ header {
 }
 
 /*--------- Estilos Footer ---------*/
-#nav-mobile-tablet ul{
+#nav-mobile-tablet ul {
     position: fixed;
     bottom: 0;
     display: flex;
