@@ -39,7 +39,7 @@
 
 /*--------- Estilos Desktop ---------*/
 @media only screen and (min-width:1025px){
-    
+      
     #nav-mobile-tablet, .search-filter, .polygon-title h1 {display: none;}
 
     .logo-Lol {
@@ -75,7 +75,7 @@
         padding-bottom: 10px;
     }
 
-    #champions-page{padding: 2%;}
+    #champions-page{height: 100vh;}
 
     .title-page-desktop {display: block;}
     h1.title-page-desktop {font-size: 2.3em;}
@@ -95,11 +95,9 @@
        left: 48%;
     }
     
-    .card-champions {padding: 0 0 0 0;width: 80%;}
-
     .search-filter-cards {
         display: flex;
-        margin: 2% 0;
+        margin-top: 2%;
         justify-content: space-around;
     }
 
@@ -107,7 +105,7 @@
         display:flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 12%;    
+        width: 12%;   
     }
 
     .filter-tags-desktop h2 {color: #E9CA7B; font-size: 1.5em;}
@@ -120,7 +118,7 @@
         font-family: 'Merriweather';
     }
     
-    .search-filter-desktop div {padding-bottom: 10%;} 
+    /* .search-filter-desktop div {padding-bottom: 10%;} */ 
        
     .search-input, .filter-desktop {
         border-style: solid;
@@ -147,9 +145,22 @@
         margin: 0 0 2% 2%;
     } 
 
+
     .card-champions {
-        overflow-y: scroll;
-        height: 380px;
+        padding: 0 0 0 0;
+        width: 80%;
+        overflow:auto;
+        height: 600px;       
+    }
+
+    .card-champions::-webkit-scrollbar{
+        width: 10px;
+        background: #414141;
+    }
+
+    .card-champions::-webkit-scrollbar-thumb{
+        background: #9c9c9c;
+        border-radius: 7px;
     }
     
     footer {
@@ -159,5 +170,25 @@
         bottom: 0;
         width: 100%;
         height: 6%;
+       
+    } 
+    
+    #nav-social-media {display: block; margin-top: 1%;}
+
+    #nav-social-media ul {
+        display: flex;
+        justify-content:flex-end;
+        list-style-type:none;
+        margin-right: 3%;
     }
-}
+    
+    #nav-social-media li {
+        padding: 0 1%;
+    }
+
+    #nav-social-media i {
+       font-size: 2em;
+       color: #F2E5D6;
+    }
+  
+}  
