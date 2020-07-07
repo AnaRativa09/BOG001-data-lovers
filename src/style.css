@@ -57,6 +57,7 @@ header {
     display: flex;
     width: 100%;
     justify-content: space-around;
+    align-items: center;
     background-color: rgba(242, 229, 214, 0.16);
     border-bottom: 2px solid #523D24;
     padding: 2% 0; 
@@ -64,20 +65,31 @@ header {
 
 .filter-input{
     background-color: transparent;
-    border-style: none;
+    border: 2px solid #523D24;
+    border-radius: 5px;
     width: 30%;
     font-family: 'Merriweather';
     color: #E9CA7B;
     font-size: 1em; /*[--> FALTA FONT-SIZE OPTION]*/
 }
 
-.search-input {
-    width: 25%;
-    border-style: solid;
+.search {
+    width: 100%;
     /*background-color: rgba(255, 255, 255, 0.3);*/
     background-color: transparent;
     border: 2px solid #523D24;
     border-radius: 5px;
+    color: #E9CA7B;
+    font-size: 1em;
+}
+
+.search-input {position: relative; border: none; width: 30%;}
+
+.search-input i {
+    position: absolute; 
+    right:8px; 
+    top: 3px;
+    color: #E9CA7B;
 }
 
 .search-input::placeholder {
@@ -124,6 +136,7 @@ header {
 }
 
 /*--------- Estilos Footer ---------*/
+footer p {display: none;}
 #nav-mobile-tablet ul {
     position: fixed;
     bottom: 0;
