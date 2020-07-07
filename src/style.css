@@ -136,7 +136,7 @@ header {
 }
 
 /*--------- Estilos Footer ---------*/
-footer p {display: none;}
+footer .made-it {display: none;}
 #nav-mobile-tablet ul {
     position: fixed;
     bottom: 0;
