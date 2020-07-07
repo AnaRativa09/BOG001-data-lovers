@@ -75,7 +75,7 @@
         padding-bottom: 10px;
     }
 
-    #champions-page{height: 74vh;} /*[--> Para definir el alto según viewport]*/
+    #champions-page{height: 74vh;padding: 1%;} /*[--> Para definir el alto según viewport]*/
 
     .title-page-desktop {display: block;}
     h1.title-page-desktop {font-size: 2.3em;}
@@ -182,8 +182,9 @@
     .card-champions {
         padding: 0 0 0 0;
         width: 80%;
-        overflow:auto;
-        max-height: 480px;  
+        overflow-y:auto;
+        overflow-x: hidden;
+        max-height: 440px;  
     }
 
     .card-champions::-webkit-scrollbar{
