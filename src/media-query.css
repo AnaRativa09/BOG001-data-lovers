@@ -42,6 +42,8 @@
       
     #nav-mobile-tablet, .search-filter, .polygon-title h1 {display: none;}
 
+    .header {height: 20vh;}
+      
     .logo-Lol {
         width: 15%;
         height: 15%;
@@ -73,7 +75,7 @@
         padding-bottom: 10px;
     }
 
-    #champions-page{height: 100vh;} /*[--> Para definir el alto según viewport]*/
+    #champions-page{height: 74vh;} /*[--> Para definir el alto según viewport]*/
 
     .title-page-desktop {display: block;}
     h1.title-page-desktop {font-size: 2.3em;}
@@ -104,18 +106,48 @@
         flex-direction: column;
     }
        
-    .search-input, .filter-desktop {
+    .filter-desktop {
         border-style: solid;
         background-color: rgba(242, 229, 214, 0.16);
-        border: 2px solid #523D24;
+        border: solid #523D24;
         border-radius: 5px;
         width: 200px;
         height: 30px;
         font-size:1em ;
         color: #E9CA7B;
         font-family: 'Merriweather'; 
-        margin-bottom: 10%;   
+        margin-bottom: 15%; 
     }
+
+    .search-input-desktop {
+        position: relative; 
+        border: none;
+        margin-bottom: 15%;
+    }
+
+    .search-desktop {
+        border-style: solid;
+        background-color: rgba(242, 229, 214, 0.16);
+        box-sizing: border-box;
+        border: solid #523D24;
+        border-radius: 5px;
+        top:0;
+        width: 200px;
+        height: 30px;
+        padding-left: 30px;
+        font-family: 'Merriweather'; 
+    }
+
+    
+
+    .search-input-desktop i {
+        position: absolute; 
+        left:5px; 
+        top: 11px;
+        padding: 8px 5px; 
+        color: #E9CA7B;
+    } 
+
 
     .filter-tags-desktop h2 {color: #E9CA7B; font-size: 1.5em;}
     .filter-tags-desktop div {color: #F2E5D6; font-size: 1em;}
@@ -151,7 +183,7 @@
         padding: 0 0 0 0;
         width: 80%;
         overflow:auto;
-        height: 600px;  
+        max-height: 480px;  
     }
 
     .card-champions::-webkit-scrollbar{
@@ -164,17 +196,22 @@
         border-radius: 7px;
     }
     
+    footer .made-it {display: block;}
+
+
     footer {
         border-top: solid #cb954a; 
         background-color:#0F151D;
         position: fixed;
         bottom: 0;
         width: 100%;
-        height: 6%;
+        height: 6vh;
         display: flex;
         align-items: center;
         justify-content: space-around;
     } 
+
+    
     
     #nav-social-media {display: block;}
 
