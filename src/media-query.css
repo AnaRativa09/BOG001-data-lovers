@@ -152,7 +152,7 @@
     .filter-tags-desktop h2 {color: #E9CA7B; font-size: 1.5em;}
     .filter-tags-desktop div {color: #F2E5D6; font-size: 1em;}
     
-    .filter-tags-desktop {
+    .filter-tags-desktop, .roles{
         display: flex;
         flex-direction: column;
         align-items: flex-start;
