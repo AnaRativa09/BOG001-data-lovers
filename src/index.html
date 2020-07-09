@@ -75,12 +75,14 @@
             </select>
             <div class="filter-tags-desktop">
               <h2>Roles</h2>
-              <div><input type="checkbox" name="Assassins" id="Assassins"><label for="Assassins">Assassins</label></div>
-              <div><input type="checkbox" name="Marksmen" id="Marksmen"><label for="Marksmen">Marksmen</label></div>
-              <div><input type="checkbox" name="Supports" id="Supports"><label for="Supports">Supports</label></div>
-              <div><input type="checkbox" name="Fighters" id="Fighters"><label for="Fighters">Fighters</label></div>
-              <div><input type="checkbox" name="Mages" id="Mages"><label for="Mages">Mages</label></div>
-              <div><input type="checkbox" name="Tanks" id="Tanks"><label for="Tanks">Tanks</label></div>
+              <div class='roles'>
+                <input type="checkbox" name="Assassins" id="roles"value="Assassin"><label for="Assassins">Assassins</label>
+                <input type="checkbox" name="Marksman" id="roles" value="Marksman"><label for="Marksman">Marksman</label>
+                <input type="checkbox" name="Supports" id="roles" value="Support"><label for="Supports">Supports</label>
+                <input type="checkbox" name="Fighters" id="roles" value="Fighter"><label for="Fighters">Fighters</label>
+                <input type="checkbox" name="Mages" id="roles" value="Mage"><label for="Mages">Mages</label>
+                <input type="checkbox" name="Tanks" id="roles" value="Tank"><label for="Tanks">Tanks</label>
+              </div>
             </div>
           </div>
           <section class="card-champions"></section>

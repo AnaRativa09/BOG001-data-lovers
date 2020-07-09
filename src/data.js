@@ -1,13 +1,22 @@
 // estas funciones son de ejemplo
-export const filterData = (data, condition) => {
- 
- 
+export const searching = (lolRoles, champName) =>{
+  let info = lolRoles.find(function(val){
+    
+    return val.name == champName
 
+})
+  return console.log(info)
+}
 
-  return 'filterData';
+export const filterData = (lolRoles,rol) => {
+   
+  let arrayRoles=lolRoles.filter(function(val){
+    return val.tags.includes(rol)
+   })
+   return console.log(arrayRoles) 
 };
 
-export const anotherExample = () => {
- return './data/lol/lol.js'.filter()
+export const sortData = () => {
+ return './data/lol/lol.js'
  
 };

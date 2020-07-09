@@ -6,8 +6,8 @@ describe('filterData', () => {
     expect(typeof filterData).toBe('function');
   });
 
-  it.skip('returns `example`', () => {
-    expect(example()).toBe('example');
+  it('returns array con objetos ', () => {
+    expect(filterData()).toBe('array');
   });
 });
 
