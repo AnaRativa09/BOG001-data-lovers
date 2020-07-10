@@ -46,7 +46,7 @@ function searching (){
 }
 /*-------- Filter select mobile -------- */
 let selectRoles = document.querySelector('.filter-select');
-selectRoles.addEventListener('blur', checkRoles);
+selectRoles.addEventListener('change', checkRoles);
 
 
 
