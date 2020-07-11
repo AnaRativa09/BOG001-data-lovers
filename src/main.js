@@ -1,20 +1,17 @@
 import data from './data/lol/lol.js';
-import {filterData} from './data.js';
-let lolData = Object.entries(data.data)
-let lolRoles = Object.values(data.data )
-
+import {filterData, searchingData, sortingData} from './data.js';
+let lolRoles = Object.values(data.data)
+console.log(lolRoles)
 
 let championsCards = document.querySelector('.card-champions');
-let checkboxRoles = document.querySelector('.roles');
-console.log(checkboxRoles.textContent)
 
-window.onload = () =>{
-const attribute = lolData.map(champions=> `
+const showingChamps = (data) =>{
+const attribute = data.map(champions=> `
   
-    <article style= "background-image:url('${champions[1].splash}')" class="card"> 
+    <article style= "background-image:url('${champions.splash}')" class="card"> 
       <div class="name-title-container">
-        <h2>${champions[1].name}</h2>
-        <p>${champions[1].title}</p>
+        <h2>${champions.name}</h2>
+        <p>${champions.title}</p>
       </div>
     </article>`
     
@@ -23,81 +20,58 @@ const attribute = lolData.map(champions=> `
  championsCards.innerHTML= attribute;
 };
 
-/*------ Searchig names -------*/
+window.onload = function(){showingChamps(lolRoles)}
+
+/*------ Searchig names mobile -------*/
+let searchMobile=document.querySelector('.search');
+searchMobile.addEventListener('keyup',searching);
+
+
+/*------ Searchig names desktop -------*/
 let searchChampions = document.querySelector('.search-desktop');
 searchChampions.addEventListener('keyup', searching);
 
-
-
-function searching (event){
+function searching (){
   let champName = document.querySelector('.search-desktop').value;
-   console.log(champName)
-  let info = lolRoles.find(function(val){
-    return val.name == champName
-  })
-  return console.log(info)
-}
+  let searchChamp = searchingData(lolRoles,champName);
 
+  if (champName ==" "){
+    showingChamps(lolRoles)
+  }else{
+    showingChamps(searchChamp)
+  }
+} 
 
+/*-------- Filter select mobile -------- */
+let selectRoles = document.querySelector('.filter-select');
+selectRoles.addEventListener('change', checkRoles);
 
-/*-------- Filtrar con checkbox -------- */
-checkboxRoles.addEventListener('change', checkRoles)
+/*-------- Filter checkbox -------- */
+let checkboxRoles = document.querySelector('.roles');
+checkboxRoles.addEventListener('change', checkRoles);
 
 function checkRoles (event){
   event.preventDefault();
   let rol = event.target.value;
-  filterData(lolRoles,rol)
-  
+  let result= filterData(lolRoles,rol)
+  console.log(result)
+  if (rol==="Roles"){
+    showingChamps(lolRoles)
+  }else{
+    showingChamps(result)
+  }
 } 
 
+/*--------sorting mobile -------- */
+let sortSelect = document.querySelector('.filter-input');
+sortSelect.addEventListener('change', sortingChamps);
 
+/*--------sorting Desktop -------- */
+let sortData=document.querySelector('.filter-desktop');
+sortData.addEventListener('change', sortingChamps);
 
-
-
-/*  for (var j =0; j<lolRoles.length;j++){
-   let arrayRoles = lolRoles[j].tags;
-  // ["Fighter", "Assassin"] 
-    for (var i =0; i < arrayRoles.length;i++){
-      if(arrayRoles[i]==="Fighter"){
-        console.log(lolRoles[1].name)
-      }
-    }
-  } */
-
-  
- 
- 
-  /* .map(function(namesx){
-    namesx = lolRoles[1].name
-    return(namesx);
-  }) */
-
-
- 
-  
-
-
-  /* arrayRoles.filter(function(val){
-    return val.name
-  });
-  */
-
- /*  console.log(arrayRoles) */
-
-  
-     
-
-/*
- 
-
-
-
-
-
-/*  arrayRoles.filter(function(val){
-  return arrayRoles === "figther"
- }); */
-
-
-
-
+function sortingChamps (){
+  let order = document.querySelector('.filter-desktop').value;
+  let sorting = sortingData(lolRoles,order)
+  showingChamps(sorting) 
+}
