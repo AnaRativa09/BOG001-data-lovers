@@ -1,9 +1,6 @@
 import data from './data/lol/lol.js';
-import {filterData,searchingData} from './data.js';
-//import {searchingData} from './data.js';
-//let lolData = Object.entries(data.data)
+import {filterData, searchingData, sortingData} from './data.js';
 let lolRoles = Object.values(data.data)
-
 console.log(lolRoles)
 
 let championsCards = document.querySelector('.card-champions');
@@ -36,19 +33,18 @@ searchChampions.addEventListener('keyup', searching);
 
 function searching (){
   let champName = document.querySelector('.search-desktop').value;
-  let upperName = champName.charAt(0).toUpperCase() + champName.slice(1)
-  let infoChamps = searchingData(lolRoles,upperName)
-  let infoinArr = new Array (infoChamps)
-   if (champName == ''){
-     showingChamps(lolRoles)
-   }else{ showingChamps(infoinArr)}
-   
-}
+  let searchChamp = searchingData(lolRoles,champName);
+
+  if (champName ==" "){
+    showingChamps(lolRoles)
+  }else{
+    showingChamps(searchChamp)
+  }
+} 
+
 /*-------- Filter select mobile -------- */
 let selectRoles = document.querySelector('.filter-select');
 selectRoles.addEventListener('change', checkRoles);
-
-
 
 /*-------- Filter checkbox -------- */
 let checkboxRoles = document.querySelector('.roles');
@@ -66,10 +62,16 @@ function checkRoles (event){
   }
 } 
 
-/*--------sorting -------- */
+/*--------sorting mobile -------- */
+let sortSelect = document.querySelector('.filter-input');
+sortSelect.addEventListener('change', sortingChamps);
 
+/*--------sorting Desktop -------- */
+let sortData=document.querySelector('.filter-desktop');
+sortData.addEventListener('change', sortingChamps);
 
-
-
-
-
+function sortingChamps (){
+  let order = document.querySelector('.filter-desktop').value;
+  let sorting = sortingData(lolRoles,order)
+  showingChamps(sorting) 
+}
