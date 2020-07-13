@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,7 +12,7 @@
 
   <body>
     <header>
-      <img src="images/lolLogo.png" class="logo-Lol">
+      <img src="images/lolLogo.png" class="logo-Lol" alt="Logo League Of Legends">
       
       <div class="title-page">
         <div class="polygon-title-border">
@@ -38,51 +38,42 @@
       <section id="champions-page">
         <h1 class="title-page-desktop">CHOOSE YOUR CHAMPION</h1>
         <p class="title-page-desktop">With more than 140 champions, you’ll find the perfect match for your playstyle.</p>
-
-        <div class="search-filter">
-
-          <div class="search-input">
-            <i class="fas fa-search"></i>
-            <input type="text" placeholder="Search" class="search" > 
-          </div> 
-          
-          <select class="filter-input">
-            <option>Order A-Z</option>
-            <option>Order Z-A</option>
-          </select>
-          <select class="filter-input">
-            <option disabled selected>Roles</option>
-            <option>Assassins</option>
-            <option>Marksmen</option>
-            <option>Supports</option>
-            <option>Fighters</option>
-            <option>Mages</option>
-            <option>Tanks</option>
-          </select>
-        </div> 
         
         <div class="search-filter-cards">
-          <div class="search-filter-desktop">
-
-            <div class="search-input-desktop">
+          <div class="search-filter">
+            <div class="search-input"> <!-- INPUT BÚSQUEDA -->
               <i class="fas fa-search"></i>
-              <input type="text" placeholder="Search" class="search-desktop" > 
-            </div>  
-      
-            <select class="filter-desktop">
-              <option>Order A-Z</option>
-              <option>Order Z-A</option>
+              <input type="text" placeholder="Search" class="search"> 
+            </div> 
+            
+            <select class="filter-input sort-select"> <!-- SELECT ORDENAR -->
+              <option value ="asc">Order A-Z</option>
+              <option  value ="desc">Order Z-A</option>
             </select>
-            <div class="filter-tags-desktop">
+  
+            <select class="filter-input filter-select"> <!-- SELECT ROLES -->
+              <option value="Roles">Roles</option>
+              <option value="Assassin">Assassins</option>
+              <option value="Marksman">Marksman </option>
+              <option value="Support">Supports</option>
+              <option value="Fighter">Fighters</option>
+              <option value="Mage">Mages</option>
+              <option value="Tank">Tanks</option>
+            </select>
+
+            <div class="filter-tags-desktop"> <!-- CHECKBOX ROLES -->
               <h2>Roles</h2>
-              <div><input type="checkbox" name="Assassins" id="Assassins"><label for="Assassins">Assassins</label></div>
-              <div><input type="checkbox" name="Marksmen" id="Marksmen"><label for="Marksmen">Marksmen</label></div>
-              <div><input type="checkbox" name="Supports" id="Supports"><label for="Supports">Supports</label></div>
-              <div><input type="checkbox" name="Fighters" id="Fighters"><label for="Fighters">Fighters</label></div>
-              <div><input type="checkbox" name="Mages" id="Mages"><label for="Mages">Mages</label></div>
-              <div><input type="checkbox" name="Tanks" id="Tanks"><label for="Tanks">Tanks</label></div>
+              <div class='roles'>
+                <input type="checkbox" name="Assassins" id="Assassin"value="Assassin"><label for="Assassins">Assassins</label>
+                <input type="checkbox" name="Marksman" id="Marksman" value="Marksman"><label for="Marksman">Marksman</label>
+                <input type="checkbox" name="Supports" id="Support" value="Support"><label for="Supports">Supports</label>
+                <input type="checkbox" name="Fighters" id="Fighter" value="Fighter"><label for="Fighters">Fighters</label>
+                <input type="checkbox" name="Mages" id="Mage" value="Mage"><label for="Mages">Mages</label>
+                <input type="checkbox" name="Tanks" id="Tank" value="Tank"><label for="Tanks">Tanks</label>
+              </div>
             </div>
           </div>
+
           <section class="card-champions"></section>
         </div>
       </section>
@@ -94,19 +85,19 @@
       <nav id="nav-mobile-tablet">
         <ul>
           <li class="home">
-            <img  src="images/lolIcon.svg">
+            <img  src="images/lolIcon.svg" alt="Icon Home">
             <p>Home</p>
           </li>
           <li class="champions-menu">
-           <img src="images/championsIcon.svg">
+           <img src="images/championsIcon.svg" alt="Icon Champions">
            <p>Champions</p>
           </li>
           <li class="map-menu">
-           <img src="images/mapIcon.svg">
+           <img src="images/mapIcon.svg" alt="Icon Rails">
            <p>Rails</p>
           </li> 
           <li class="play-menu">
-           <img src="images/gameIcon.svg">
+           <img src="images/gameIcon.svg" alt="Icon Play">
            <p>Play</p>
           </li>
         </ul>

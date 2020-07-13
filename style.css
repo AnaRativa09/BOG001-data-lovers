@@ -1,7 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-}
+* {margin: 0; padding: 0;}
 
 body {
     color: #F2E5D6;
@@ -9,17 +6,12 @@ body {
     text-align: center;
 }
 
-main {
-    background: url(images/lolBg.jpg);
-    background-position: top;
-}
+main {background: url(images/lolBg.jpg) top;}
 
 /*--------- Estilos Header ---------*/
 header {
-    background: url(images/lolBgHeaderV2.jpg);
-    background-repeat: no-repeat;
+    background: url(images/lolBgHeaderV2.jpg) no-repeat center;
     background-size: cover;
-    background-position: center;
     text-align: right;
     width: 100%;
 }
@@ -50,20 +42,20 @@ header {
     padding: 8% 0 1% 0;
 }
 
- .search-filter-desktop, #nav-desktop, .title-page-desktop, .imageL {display: none;}
+#nav-desktop, .title-page-desktop, .imageL, .filter-tags-desktop {display: none;}
 
 /*--------- Estilos Search + Filter ---------*/
 .search-filter {
     display: flex;
-    width: 100%;
     justify-content: space-around;
     align-items: center;
+    width: 100%;
     background-color: rgba(242, 229, 214, 0.16);
     border-bottom: 2px solid #523D24;
     padding: 2% 0; 
 }
 
-.filter-input{
+.filter-input {
     background-color: transparent;
     border: 2px solid #523D24;
     border-radius: 5px;
@@ -71,16 +63,6 @@ header {
     font-family: 'Merriweather';
     color: #E9CA7B;
     font-size: 1em; /*[--> FALTA FONT-SIZE OPTION]*/
-}
-
-.search {
-    width: 100%;
-    /*background-color: rgba(255, 255, 255, 0.3);*/
-    background-color: transparent;
-    border: 2px solid #523D24;
-    border-radius: 5px;
-    color: #E9CA7B;
-    font-size: 1em;
 }
 
 .search-input {position: relative; border: none; width: 30%;}
@@ -92,11 +74,19 @@ header {
     color: #E9CA7B;
 }
 
-.search-input::placeholder {
-    font-family: 'Merriweather';
-    color: #E9CA7B;
+.search {
+    width: 100%;
+    background-color: transparent;
+    border: 2px solid #523D24;
+    border-radius: 5px;
     font-size: 1em;
-    padding: 0 10%;
+    font-family: 'Merriweather';
+    color: #E9CA7B; 
+}
+
+.search::placeholder {
+    color: #E9CA7B;
+    padding-left: 8px;
 }
 
 /*--------- Estilos Section Champions + Cards ---------*/
@@ -137,6 +127,7 @@ header {
 
 /*--------- Estilos Footer ---------*/
 footer .made-it {display: none;}
+
 #nav-mobile-tablet ul {
     position: fixed;
     bottom: 0;
@@ -157,4 +148,4 @@ footer .made-it {display: none;}
     height: 40%;
 }
 
-#nav-social-media{display: none;}
+#nav-social-media {display: none;}
