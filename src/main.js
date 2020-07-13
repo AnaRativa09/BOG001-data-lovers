@@ -43,22 +43,36 @@ function searching (){
 
 /*-------- Filter select mobile -------- */
 let selectRoles = document.querySelector('.filter-select');
-selectRoles.addEventListener('change', checkRoles);
+selectRoles.addEventListener('change', checkRolesMobile);
+
+function checkRolesMobile(event){
+  let rol = event.target.value;
+  if (rol === 'Roles'){
+    showingChamps(lolRoles)
+  }else {
+    let result= filterData(lolRoles,rol)
+    showingChamps(result)
+  }
+}
+
 
 /*-------- Filter checkbox -------- */
 let checkboxRoles = document.querySelector('.roles');
 checkboxRoles.addEventListener('change', checkRoles);
 
+
 function checkRoles (event){
-  event.preventDefault();
   let rol = event.target.value;
-  let result= filterData(lolRoles,rol)
-  console.log(result)
-  if (rol==="Roles"){
-    showingChamps(lolRoles)
-  }else{
+  let checkboxRol=document.getElementById(rol);
+  console.log(checkboxRol.checked)
+
+  if (checkboxRol.checked === true){
+    let result= filterData(lolRoles,rol)
     showingChamps(result)
+  }else{
+    showingChamps(lolRoles)
   }
+  
 } 
 
 /*-------- Sorting mobile -------- */
