@@ -16,10 +16,10 @@
     .search-filter {
        width: 80%;
        margin: auto;
-       border:3px solid #523D24;
+       border: solid #523D24;
     }
 
-    .filter-input, .search-input::placeholder {font-size: 1.2em;}
+    .filter-input, .search::placeholder {font-size: 1.2em;}
     
     .card {
         width:250px; 
@@ -33,20 +33,22 @@
         padding-bottom: 7%;
     }
     
-    #nav-mobile-tablet li {font-size: 1.1em;}
-    #nav-mobile-tablet ul {height: 7%;}
+   /*  #nav-mobile-tablet li {font-size: 1.1em;}
+    #nav-mobile-tablet ul {height: 7%;} */
 }
 
 /*--------- Estilos Desktop ---------*/
 @media only screen and (min-width:1025px){
       
-    #nav-mobile-tablet, .search-filter, .polygon-title h1 {display: none;}
-
-    .header {height: 20vh;}
+    #nav-mobile-tablet, .polygon-title h1, .filter-select{display: none;}
 
     main {
         background-repeat: no-repeat;
-        background-size: cover;}
+        background-size: cover;
+    }
+
+    /* Header */
+    .header {height: 20vh;}
       
     .logo-Lol {
         width: 15%;
@@ -69,7 +71,6 @@
     }
 
     a {text-decoration: none; color:#F2E5D6;}
-    /*a:link Enlaces no visitados, a:visited Enlaces visitados, a:hover El usuario esta sobre el enlace, a:active Enlaces activos */
     a:hover {color: #B48030;}
     
     #nav-desktop .home-play {padding-top:10px}
@@ -79,100 +80,71 @@
         padding-bottom: 10px;
     }
 
-    #champions-page{height: 74vh;padding: 3%;} /*[--> Para definir el alto según viewport]*/
+    .title-page {position: relative;}
+
+    .imageL-container {
+        display:block;
+        position: absolute;
+        background: url("images/lolIconL.png") no-repeat center;
+        background-size: cover;
+        width: 65px;
+        height: 65px;
+        top: 15%;
+        left: 48%;
+    }
+
+    /* Champions Section */
+    #champions-page{height: 74vh; padding-top: 3%;} /*[--> Para definir el alto según viewport]*/
 
     .title-page-desktop {display: block;}
     h1.title-page-desktop {font-size: 2.3em;}
     p.title-page-desktop {font-size: 1em; padding-top: 0.5%;}
     
-    .title-page {position: relative;}
+    .filter-tags-desktop {display: block;}
 
-    .imageL-container {
-       background: url("images/lolIconL.png") no-repeat;
-       display:block;
-       width: 65px;
-       height: 65px;
-       position: absolute;
-       background-position: center;
-       background-size: cover;
-       top: 15%;
-       left: 48%;
-    }
-    
     .search-filter-cards {
         display: flex;
         margin-top: 2%;
         justify-content: space-around;
+        align-self: flex-start;
     }
 
-    .search-filter-desktop {
+    .search-filter {
         display:flex;
         flex-direction: column;
+        align-items: flex-start;
+        background-color: transparent;
+        border-style: none;
+        justify-content: flex-start;
+        width: 15%;
+        padding: 0;
+        margin: 0;
     }
-       
-    .filter-desktop {
-        border-style: solid;
-        background-color: rgba(242, 229, 214, 0.16);
-        border: solid #523D24;
-        border-radius: 5px;
-        width: 200px;
+
+    .filter-input, .search-input {
+        width: 200px; 
         height: 30px;
-        font-size:1em ;
-        color: #E9CA7B;
-        font-family: 'Merriweather'; 
-        margin-bottom: 15%; 
+        margin-bottom:10%;
     }
 
-    .search-input-desktop {
-        position: relative; 
-        border: none;
-        margin-bottom: 15%;
-    }
-
-    .search-desktop {
-        border-style: solid;
+    .search::placeholder {
         background-color: rgba(242, 229, 214, 0.16);
-        box-sizing: border-box;
-        border: solid #523D24;
-        border-radius: 5px;
-        top:0;
-        width: 200px;
-        height: 30px;
-        padding-left: 30px;
-        font-family: 'Merriweather'; 
+        padding:0 0 0 8px;
     }
-
-    .search-input-desktop i {
-        position: absolute; 
-        left:5px; 
-        top: 11px;
-        padding: 8px 5px; 
-        color: #E9CA7B;
-    } 
-
-    .filter-tags-desktop h2 {color: #E9CA7B; font-size: 1.5em;}
-    .filter-tags-desktop div {color: #F2E5D6; font-size: 1em;}
-    
+   
     .filter-tags-desktop, .roles{
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         font-family: 'Merriweather';
-    }
+    } 
 
-    /* input[type="checkbox"]:not(old) {
-        content: '';
-        width: 15px;
-        height: 15px;
-        border: 1px double black;
-        cursor: pointer;
-        vertical-align: top;
-        display: inline-block;
-        margin-right: 5px;
-     } */
-    
-    .search-filter-desktop div {padding-top: 5%;} 
+    .filter-tags-desktop h2 {color: #E9CA7B; font-size: 1.5em;}
+    .filter-tags-desktop div {color: #F2E5D6; font-size: 1em;}
 
+    .roles {padding-top: 5%;} 
+
+    /* Cards */
     .card {
         width:180px; 
         min-height: 200px;
@@ -220,5 +192,4 @@
     
     #nav-social-media li {margin: 0 10%;}
     #nav-social-media i {font-size: 2em;}
-  
 }  
