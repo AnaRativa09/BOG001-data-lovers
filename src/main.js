@@ -22,13 +22,9 @@ const attribute = data.map(champions=> `
 
 window.onload = function(){showingChamps(lolRoles)}
 
-/*------ Searchig names mobile -------*/
+/*------ Searchig names -------*/
 let searchChampionsMobile = document.querySelector('.search');
 searchChampionsMobile.addEventListener('keyup', searching);
-
-/*------ Searchig names desktop -------*/
-let searchChampions = document.querySelector('.search-desktop'); //Solo selecciona el primero de la clase
-searchChampions.addEventListener('keyup', searching);
 
 function searching (){
   let champName = event.target.value;
@@ -41,7 +37,7 @@ function searching (){
   }
 } 
 
-/*-------- Filter select mobile -------- */
+/*-------- Filter Select (mobile/tablet) -------- */
 let selectRoles = document.querySelector('.filter-select');
 selectRoles.addEventListener('change', checkRolesMobile);
 
@@ -55,11 +51,9 @@ function checkRolesMobile(event){
   }
 }
 
-
-/*-------- Filter checkbox -------- */
+/*-------- Filter Checkbox (desktop) -------- */
 let checkboxRoles = document.querySelector('.roles');
 checkboxRoles.addEventListener('change', checkRoles);
-
 
 function checkRoles (event){
   let rol = event.target.value;
@@ -72,16 +66,11 @@ function checkRoles (event){
   }else{
     showingChamps(lolRoles)
   }
-  
 } 
 
-/*-------- Sorting mobile -------- */
-let sortSelect = document.querySelector('.filter-input');
+/*-------- Sorting -------- */
+let sortSelect = document.querySelector('.sort-select');
 sortSelect.addEventListener('change', sortingChamps);
-
-/*-------- Sorting Desktop -------- */
-let sortData=document.querySelector('.filter-desktop');
-sortData.addEventListener('change', sortingChamps);
 
 function sortingChamps (){
   let order = event.target.value;

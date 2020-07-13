@@ -81,11 +81,12 @@ header {
     border-radius: 5px;
     font-size: 1em;
     font-family: 'Merriweather';
+    color: #E9CA7B; 
 }
 
 .search::placeholder {
     color: #E9CA7B;
-    
+    padding-left: 8px;
 }
 
 /*--------- Estilos Section Champions + Cards ---------*/
@@ -147,4 +148,4 @@ footer .made-it {display: none;}
     height: 40%;
 }
 
-#nav-social-media{display: none;}
+#nav-social-media {display: none;}
