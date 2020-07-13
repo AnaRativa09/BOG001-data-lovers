@@ -36,45 +36,49 @@
       <section class="home-page"></section>
         
       <section id="champions-page">
-        <h1 class="title-page-desktop">CHOOSE YOUR CHAMPION</h1>
+        <div class="champions-page-container">
+          <h1 class="title-page-desktop">CHOOSE YOUR CHAMPION</h1>
         <p class="title-page-desktop">With more than 140 champions, you’ll find the perfect match for your playstyle.</p>
         
         <div class="search-filter-cards">
-          <div class="search-filter">
-            <div class="search-input"> <!-- INPUT BÚSQUEDA -->
-              <i class="fas fa-search"></i>
-              <input type="text" placeholder="Search" class="search"> 
-            </div> 
-            
-            <select class="filter-input sort-select"> <!-- SELECT ORDENAR -->
-              <option value ="asc">Order A-Z</option>
-              <option  value ="desc">Order Z-A</option>
-            </select>
+          <div class="search-filter-container">
+            <div class="search-filter">
+              <div class="search-input"> <!-- INPUT BÚSQUEDA -->
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search" class="search"> 
+              </div> 
+              
+              <select class="filter-input sort-select"> <!-- SELECT ORDENAR -->
+                <option value ="asc">Order A-Z</option>
+                <option  value ="desc">Order Z-A</option>
+              </select>
+    
+              <select class="filter-input filter-select"> <!-- SELECT ROLES -->
+                <option value="Roles">Roles</option>
+                <option value="Assassin">Assassins</option>
+                <option value="Marksman">Marksman </option>
+                <option value="Support">Supports</option>
+                <option value="Fighter">Fighters</option>
+                <option value="Mage">Mages</option>
+                <option value="Tank">Tanks</option>
+              </select>
   
-            <select class="filter-input filter-select"> <!-- SELECT ROLES -->
-              <option value="Roles">Roles</option>
-              <option value="Assassin">Assassins</option>
-              <option value="Marksman">Marksman </option>
-              <option value="Support">Supports</option>
-              <option value="Fighter">Fighters</option>
-              <option value="Mage">Mages</option>
-              <option value="Tank">Tanks</option>
-            </select>
-
-            <div class="filter-tags-desktop"> <!-- CHECKBOX ROLES -->
-              <h2>Roles</h2>
-              <div class='roles'>
-                <input type="checkbox" name="Assassins" id="Assassin"value="Assassin"><label for="Assassins">Assassins</label>
-                <input type="checkbox" name="Marksman" id="Marksman" value="Marksman"><label for="Marksman">Marksman</label>
-                <input type="checkbox" name="Supports" id="Support" value="Support"><label for="Supports">Supports</label>
-                <input type="checkbox" name="Fighters" id="Fighter" value="Fighter"><label for="Fighters">Fighters</label>
-                <input type="checkbox" name="Mages" id="Mage" value="Mage"><label for="Mages">Mages</label>
-                <input type="checkbox" name="Tanks" id="Tank" value="Tank"><label for="Tanks">Tanks</label>
+              <div class="filter-tags-desktop"> <!-- CHECKBOX ROLES -->
+                <h2>Roles</h2>
+                <div class='roles'>
+                  <label for="Assassins"><input type="checkbox" name="Assassins" id="Assassin"value="Assassin">Assassins</label>
+                  <label for="Marksman"><input type="checkbox" name="Marksman" id="Marksman" value="Marksman">Marksman</label>
+                  <label for="Supports"><input type="checkbox" name="Supports" id="Support" value="Support">Supports</label>
+                  <label for="Fighters"><input type="checkbox" name="Fighters" id="Fighter" value="Fighter">Fighters</label>
+                  <label for="Mages"><input type="checkbox" name="Mages" id="Mage" value="Mage">Mages</label>
+                  <label for="Tanks"><input type="checkbox" name="Tanks" id="Tank" value="Tank">Tanks</label>
+                </div>
               </div>
             </div>
           </div>
 
           <section class="card-champions"></section>
+        </div>
         </div>
       </section>
 
