@@ -45,4 +45,9 @@ export const sortingData = (lolRoles, order) => {
     return sortData
   }
 };
+/*------ ComputeStats -------*/
+export const computeStats = () => {
+
+ return 'lolRoles'
+}
 
