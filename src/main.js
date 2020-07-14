@@ -34,6 +34,7 @@ function searching (){
     showingChamps(lolRoles)
   }else{
     showingChamps(searchChamp)
+    /* championsCards.style.justify-content:'flex-start'; */
   }
 } 
 

@@ -1,10 +1,13 @@
-/* import { example, anotherExample } from '../src/data.js'; */
-import { filterData, searchingData, sortingData } from '../src/data.js';
+import { filterData, searchingData, sortingData, computeStats } from '../src/data.js';
 
 describe('filterData', () => {
   it('is a function', () => {
     expect(typeof filterData).toBe('function');
   });
+
+
+
+
 
   it.skip('returns array con objetos ', () => {
     expect(filterData()).toBe('array');
@@ -25,6 +28,16 @@ describe('searchingData', () => {
 describe('sortingData', () => {
   it('is a function', () => {
     expect(typeof sortingData).toBe('function');
+  });
+
+  it.skip('returns `anotherExample`', () => {
+    expect(anotherExample()).toBe('OMG');
+  });
+});
+
+describe('computeStats', () => {
+  it('is a function', () => {
+    expect(typeof computeStats).toBe('function');
   });
 
   it.skip('returns `anotherExample`', () => {
