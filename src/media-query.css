@@ -124,6 +124,7 @@
     p.title-page-desktop {font-size: 1em; padding-top: 1%;}
     
     /* Search*/
+    /* .filter-tags-desktop {display: block;} */
 
     .search-filter-cards {
         display: flex;
@@ -184,7 +185,7 @@
         width: 80%;
         overflow:auto;
         overflow-x: hidden;
-        max-height: 480px;  
+        max-height: 350px;  
     }
 
     .card-champions::-webkit-scrollbar{
