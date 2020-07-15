@@ -37,8 +37,8 @@ function searching (){
   }
 } 
 
-/*-------- Filter Select (mobile/tablet) -------- */
-let selectRoles = document.querySelector('.filter-select');
+/*-------- Filter Select (mobile/tablet/desktop) -------- */
+let selectRoles = document.querySelector('.roles-select');
 selectRoles.addEventListener('change', checkRolesMobile);
 
 function checkRolesMobile(event){
@@ -51,7 +51,7 @@ function checkRolesMobile(event){
   }
 }
 
-/*-------- Filter Checkbox (desktop) -------- */
+/*-------- Filter Checkbox (desktop) -------- 
 let checkboxRoles = document.querySelector('.roles');
 checkboxRoles.addEventListener('change', checkRoles);
 
@@ -66,7 +66,7 @@ function checkRoles (event){
   }else{
     showingChamps(lolRoles)
   }
-} 
+} */
 
 /*-------- Sorting -------- */
 let sortSelect = document.querySelector('.sort-select');

@@ -61,12 +61,13 @@
 
 /*--------- Estilos Desktop ---------*/
 @media only screen and (min-width:1025px){
-    #nav-mobile-tablet, .polygon-title h1, .filter-select{display: none;}
+    #nav-mobile-tablet, .polygon-title h1 {display: none;}
 
     main {
         background-repeat: no-repeat;
         background-size: cover;
         overflow-y: hidden;
+        /* height: 80%; */
     }
 
     /* Header */
@@ -123,7 +124,6 @@
     p.title-page-desktop {font-size: 1em; padding-top: 1%;}
     
     /* Search*/
-    .filter-tags-desktop {display: block;}
 
     .search-filter-cards {
         display: flex;
@@ -160,17 +160,17 @@
 
     .search, .filter-input {background-color: rgba(242, 229, 214, 0.16);}
    
-    .filter-tags-desktop, .roles{
+    /* .filter-tags-desktop, .roles{
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         font-family: 'Merriweather';
-    } 
+    }   .filter-tags-desktop {display: block;} 
 
     .filter-tags-desktop h2 {color: #E9CA7B; font-size: 1.5em;}
     .filter-tags-desktop div {color: #F2E5D6; font-size: 1em;}
 
-    .roles {padding-top: 5%;} 
+    .roles {padding-top: 5%;} */
 
     /* Cards */
     .card {

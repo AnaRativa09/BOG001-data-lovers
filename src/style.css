@@ -158,3 +158,7 @@ footer .made-it {display: none;}
 }
 
 #nav-social-media {display: none;}
+
+/*--------- DOM ---------*/
+
+.hidden {display: none;}
