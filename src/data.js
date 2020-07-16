@@ -12,8 +12,8 @@ export const searchingData = (lolRoles,champName) =>{
 export const filterData = (lolRoles,rol) => {
   let arrayRoles=lolRoles.filter(function(val){
     return val.tags.includes(rol)
-   })
-   return arrayRoles 
+  })
+  return arrayRoles 
 };
 
 /*------ Sorting -------*/

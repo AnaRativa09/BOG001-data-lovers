@@ -17,7 +17,7 @@ const attribute = data.map(champions=> `
     
   ).join('');
 
- championsCards.innerHTML= attribute;
+championsCards.innerHTML= attribute;
 };
 
 window.onload = function(){showingChamps(lolRoles)}

@@ -121,14 +121,14 @@ header {
     width: 100%;
     background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0) 60%);
 }
- 
+
 .name-title-container h2 {
     font-family: 'PT Serif';
     font-size: 1.3em;
     text-shadow: 1.3px 1.3px #523D24;
     padding-bottom: 2%;
 }
- 
+
 .name-title-container p {
     font-size: 0.8em;
     padding-bottom: 5%;
