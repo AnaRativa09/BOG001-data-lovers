@@ -128,6 +128,7 @@
     #champions-title {display: block;}
     
     /* Search*/
+    /* .filter-tags-desktop {display: block;} */
 
     .search-cards-container {
         display: flex;
@@ -188,7 +189,7 @@
         width: 80%;
         overflow:auto;
         overflow-x: hidden;
-        max-height: 480px;  
+        max-height: 350px;  
     }
 
     .card-champions::-webkit-scrollbar{
