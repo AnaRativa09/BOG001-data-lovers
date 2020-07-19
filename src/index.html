@@ -19,10 +19,10 @@
           <div class="polygon-title">
             <nav id="nav-desktop">
               <ul>
-              <li class="home-play"><a href="#">Home</a></li>
-                <li class="champions-rails"><a href="#">Champions</a></li>
-                <li class="champions-rails"><a href="#">Lanes</a></li> 
-                <li class="home-play"><a href="#" target="_blank">Play</a></li>
+              <li class="home-play" id="home-button"><a href="#">Home</a></li>
+                <li class="champions-rails" id="champions-button"><a href="#">Champions</a></li>
+                <li class="champions-rails" id="lanes-button"><a href="#">Lanes</a></li> 
+                <li class="home-play"><a href="https://signup.lan.leagueoflegends.com/es/signup/index#/" target="_blank">Play</a></li>
               </ul>
             </nav>
             <h1>CHAMPIONS</h1>
@@ -33,36 +33,29 @@
     </header>
 
     <main id="root">
-      <section class="home-page hidden">
-        <h1 class="">CHOOSE YOUR LANE</h1>
-        <p class="">Meet the <strong>best 5</strong> champions for each lane</p>
-        <select class="filter-input filter-lane"> <!-- SELECT LANES -->
-          <option value="Lanes">Lanes</option>
-          <option value="Assassin">Top Lane</option>
-          <option value="Support">Jungle</option>
-          <option value="Marksman">Mid Lane</option>
-          <option value="Support">Bot Lane</option>
-        </select>
+      <section id="home-page" class="hidden">
+        
       </section>
-        
-      <section id="champions-page" class="">
-        <div class="champions-page-container">
-          <h1 class="title-page-desktop">CHOOSE YOUR CHAMPION</h1>
-          <p class="title-page-desktop">With more than 140 champions, you’ll find the perfect match for your playstyle.</p>
-        
-        <div class="search-filter-cards">
+      
+      <section id="champions-page" class="hidden">
+        <div class="title-page-container" id="champions-title">
+          <h1>CHOOSE YOUR CHAMPION</h1>
+          <p>With more than 140 champions, you’ll find the perfect match for your playstyle.</p>
+        </div>
+
+        <div class="search-cards-container">
           <div class="search-filter-container">
             <div class="search-filter">
               <div class="search-input"> <!-- INPUT BÚSQUEDA -->
                 <i class="fas fa-search"></i>
                 <input type="text" placeholder="Search" class="search"> 
               </div> 
-              
+                
               <select class="filter-input sort-select"> <!-- SELECT ORDENAR -->
                 <option value ="asc">Order A-Z</option>
                 <option  value ="desc">Order Z-A</option>
               </select>
-    
+      
               <select class="filter-input roles-select"> <!-- SELECT ROLES -->
                 <option value="Roles">Roles</option>
                 <option value="Assassin">Assassins</option>
@@ -72,7 +65,7 @@
                 <option value="Mage">Mages</option>
                 <option value="Tank">Tanks</option>
               </select>
-  
+    
               <!-- <div class="filter-tags-desktop">  CHECKBOX ROLES 
                 <h2>Roles</h2>
                 <div class='roles'>
@@ -89,24 +82,46 @@
 
           <section class="card-champions"></section>
         </div>
-        </div>
       </section>
 
-      <section id="map-page"></section>
+      <section id="map-page" class="">
+        <div class="lanes-container">
+          <div class="title-select">
+            <div class="title-page-container">
+              <h1 class="">CHOOSE YOUR LANE</h1>
+              <p class="">Meet the <strong>best 5</strong> champions for each lane</p>
+            </div>
+            <select class="filter-input filter-lane"> <!-- SELECT LANES -->
+              <option value="Lanes">Lanes</option>
+              <option value="Top">Top Lane</option>
+              <option value="Jugle">Jungle</option>
+              <option value="Mid">Mid Lane</option>
+              <option value="Bot">Bot Lane</option>
+            </select>
+          </div>
+          <div class="mapSummonerRift"></div>
+        </div>
+        
+        <div class="cards-lanes-container">
+          <h1>Top 5 Assasins + Fighters</h1>
+          <section class="card-champions-lanes"></section>
+        </div>
+          
+      </section>
     </main>
     
     <footer>
       <nav id="nav-mobile-tablet">
         <ul>
-          <li class="home">
+          <li class="home" id="home-button-mob">
             <img  src="images/lolIcon.svg" alt="Icon Home">
             <p>Home</p>
           </li>
-          <li class="champions-menu">
+          <li class="champions-menu" id="champions-button-mob">
             <img src="images/championsIcon.svg" alt="Icon Champions">
             <p>Champions</p>
           </li>
-          <li class="map-menu">
+          <li class="map-menu" id="lanes-button-mob">
             <img src="images/mapIcon.svg" alt="Icon Rails">
             <p>Lanes</p>
           </li> 

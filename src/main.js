@@ -1,9 +1,9 @@
 import data from './data/lol/lol.js';
 import {filterData, searchingData, sortingData} from './data.js';
 let lolRoles = Object.values(data.data);
-console.log(lolRoles)
 
 let championsCards = document.querySelector('.card-champions');
+let championsCardsLanes = document.querySelector('.card-champions-lanes');
 
 const showingChamps = (data) =>{
 const attribute = data.map(champions=> `
@@ -18,6 +18,7 @@ const attribute = data.map(champions=> `
   ).join('');
 
 championsCards.innerHTML= attribute;
+championsCardsLanes.innerHTML= attribute;
 };
 
 window.onload = function(){showingChamps(lolRoles)}
@@ -77,3 +78,36 @@ function sortingChamps (){
   let sorting = sortingData(lolRoles,order)
   showingChamps(sorting) 
 }
+
+
+// Cambio de pantallas
+const buttonLane = document.getElementById('lanes-button');
+const buttonLaneMob = document.getElementById('lanes-button-mob');
+const buttonChampions = document.getElementById('champions-button');
+const buttonChampionsMob = document.getElementById('champions-button-mob');
+
+const championsPage = document.getElementById('champions-page');
+const lanesPage = document.getElementById('map-page');
+
+buttonLane.addEventListener('click', showLane);
+buttonLaneMob.addEventListener('click', showLane);
+buttonChampions.addEventListener('click', showChampions);
+buttonChampionsMob.addEventListener('click', showChampions);
+
+function showLane(){
+  lanesPage.classList.remove('hidden');
+  championsPage.classList.add('hidden');
+}
+function showChampions(){
+  championsPage.classList.remove('hidden');
+  lanesPage.classList.add('hidden');
+}
+
+/* buttonChampions.addEventListener('click', (e) =>{
+  championsPage.classList.remove('hidden');
+  lanesPage.classList.add('hidden');
+});
+buttonLane.addEventListener('click', (e) =>{
+  lanesPage.classList.remove('hidden');
+  championsPage.classList.add('hidden');
+}); */
