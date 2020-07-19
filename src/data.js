@@ -17,6 +17,7 @@ export const filterData = (lolData,rol) => {
 };
 
 /*------ Sorting -------*/
+
 export const sortData = (lolData,order)=>{
 
   let dataSort = lolData.sort(function(a,z){

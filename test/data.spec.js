@@ -1,7 +1,6 @@
 import { filterData, searchData, sortData, computeStats } from '../src/data.js';
 
 /*------ Testing filterData -------*/
-
 describe('filterData', () => {
   it('is a function', () => {
     expect(typeof filterData).toBe('function');
@@ -104,5 +103,15 @@ describe('computeStats', () => {
       prom: 5.25}
     ];
     expect(computeStats(information)).toEqual(output);
+  });
+});
+
+describe('computeStats', () => {
+  it('is a function', () => {
+    expect(typeof computeStats).toBe('function');
+  });
+
+  it.skip('returns `anotherExample`', () => {
+    expect(anotherExample()).toBe('OMG');
   });
 });

@@ -27,23 +27,20 @@ window.onload = function(){showingChamps(lolData)}
 
 
 /*------ Searchig names -------*/
-
 searchChampions.addEventListener('keyup', searching);
 function searching (){
   let champName = event.target.value;
   let searchingChamp = searchData(lolData,champName);
  /*  let sortingData = sortData (searchingChamp, sortSelect.value);
   let filteringData = filterData(sortingData, selectRoles.value); */
-  
   showingChamps(searchingChamp)
-
   if (champName ==" "){
     showingChamps(lolData)
   }else{    
-    
     showingChamps(searchingChamp)
   }
-}
+} 
+
 
 /*-------- Filter Select (mobile/tablet/desktop) -------- */
 selectRoles.addEventListener('change', checkRoles);
