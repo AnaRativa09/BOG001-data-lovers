@@ -1,79 +1,110 @@
 import data from './data/lol/lol.js';
-import {filterData, searchingData, sortingData} from './data.js';
-let lolRoles = Object.values(data.data);
-console.log(lolRoles)
+import {searchData, sortData, filterData, computeStats} from './data.js';
+let lolData = Object.values(data.data);
+let rolTop = [];
 
 let championsCards = document.querySelector('.card-champions');
+let selectRoles = document.querySelector('.roles-select');
+let searchChampions = document.querySelector('.search');
+let sortSelect = document.querySelector('.sort-select');
 
 const showingChamps = (data) =>{
 const attribute = data.map(champions=> `
-  
-    <article style= "background-image:url('${champions.splash}')" class="card"> 
+
+    <article style= "background-image:url('${champions.splash}')" class="card">
       <div class="name-title-container">
         <h2>${champions.name}</h2>
         <p>${champions.title}</p>
       </div>
     </article>`
-    
+
   ).join('');
 
 championsCards.innerHTML= attribute;
 };
 
-window.onload = function(){showingChamps(lolRoles)}
+window.onload = function(){showingChamps(lolData)}
+
 
 /*------ Searchig names -------*/
-let searchChampionsMobile = document.querySelector('.search');
-searchChampionsMobile.addEventListener('keyup', searching);
-
+searchChampions.addEventListener('keyup', searching);
 function searching (){
   let champName = event.target.value;
-  let searchChamp = searchingData(lolRoles,champName);
-
+  let searchingChamp = searchData(lolData,champName);
+ /*  let sortingData = sortData (searchingChamp, sortSelect.value);
+  let filteringData = filterData(sortingData, selectRoles.value); */
+  showingChamps(searchingChamp)
   if (champName ==" "){
-    showingChamps(lolRoles)
-  }else{
-    showingChamps(searchChamp)
+    showingChamps(lolData)
+  }else{    
+    showingChamps(searchingChamp)
   }
 } 
 
-/*-------- Filter Select (mobile/tablet/desktop) -------- */
-let selectRoles = document.querySelector('.roles-select');
-selectRoles.addEventListener('change', checkRolesMobile);
 
-function checkRolesMobile(event){
+/*-------- Filter Select (mobile/tablet/desktop) -------- */
+selectRoles.addEventListener('change', checkRoles);
+function checkRoles(event){
   let rol = event.target.value;
+  let result= filterData(lolData,rol)
+  /* let sortingData = sortData (result, sortSelect.value);
+  let searchingChamp = searchData(sortingData, searchChampions.value); */
+
   if (rol === 'Roles'){
-    showingChamps(lolRoles)
-  }else {
-    let result= filterData(lolRoles,rol)
+    showingChamps(lolData)
+  }else {    
     showingChamps(result)
   }
 }
 
-/*-------- Filter Checkbox (desktop) -------- 
-let checkboxRoles = document.querySelector('.roles');
-checkboxRoles.addEventListener('change', checkRoles);
-
-function checkRoles (event){
-  let rol = event.target.value;
-  let checkboxRol=document.getElementById(rol);
-  console.log(checkboxRol.checked)
-
-  if (checkboxRol.checked === true){
-    let result= filterData(lolRoles,rol)
-    showingChamps(result)
-  }else{
-    showingChamps(lolRoles)
-  }
-} */
-
 /*-------- Sorting -------- */
-let sortSelect = document.querySelector('.sort-select');
-sortSelect.addEventListener('change', sortingChamps);
 
+sortSelect.addEventListener('change', sortingChamps);
 function sortingChamps (){
   let order = event.target.value;
-  let sorting = sortingData(lolRoles,order)
-  showingChamps(sorting) 
+ /*  let searchingChamp = searchData(lolData, searchChampions.value)
+  let filteringData = filterData(searchingChamp, selectRoles.value) */
+  let sorting = sortData(lolData, order)
+  showingChamps(sorting)
+}
+
+/*-------- ComputeStats -------- */
+
+function stats (){
+  let lane = 'Top'
+
+  if (lane ==='Lanes'){
+    rolTop = lolData
+    computeStats(rolTop)
+    showingChamps(computeStats(rolTop))
+  }
+
+  if (lane ==='Top'){
+    let firstRol = filterData(lolData,'Fighter');
+    let secondRol = filterData(lolData,'Tank');
+    rolTop = firstRol.concat(secondRol)
+    computeStats(rolTop)
+    showingChamps(computeStats(rolTop))
+  }
+  if (lane === 'Jungle'){
+    let firstRol = filterData(lolData,'Assassin');
+    let secondRol = filterData(lolData,'Tank');
+    rolTop = firstRol.concat(secondRol)
+    computeStats(rolTop)
+    showingChamps(computeStats(rolTop)) 
+  }
+  if (lane === 'Mid'){
+    let firstRol = filterData(lolData,'Assassin');
+    let secondRol = filterData(lolData,'Mage');
+    rolTop = firstRol.concat(secondRol)
+    computeStats(rolTop)
+    showingChamps(computeStats(rolTop))
+  }
+  if (lane === 'Bot'){
+    let firstRol = filterData(lolData,'Marksman');
+    let secondRol = filterData(lolData,'Support');
+    rolTop = firstRol.concat(secondRol)
+    computeStats(rolTop)
+    showingChamps(computeStats(rolTop))
+  }
 }
