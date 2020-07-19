@@ -112,7 +112,7 @@ header {
     align-items: flex-end; 
     width:150px; 
     min-height:200px;
-    margin-bottom: 5%;
+    margin-bottom: 2%;
     border: solid #CB954A;
     background-position: center;
     background-size: cover;
@@ -160,11 +160,8 @@ footer .made-it {display: none;}
 
 #nav-social-media {display: none;}
 
-/*--------- DOM ---------*/
-.hidden {display: none;}
-
 /*--------- ESTILOS LANES ---------*/
-.title-page-container h1 {font-size: 2.3em;}
+.title-page-container h1 {font-size: 1.5em;}
 .title-page-container p {font-size: 1em; padding-top: 1%;}
 
 .lanes-container {
@@ -179,14 +176,23 @@ footer .made-it {display: none;}
 }
 
 .mapSummonerRift{
-    width: 360px;
-    height: 300px;
+    width: 260px;
+    height: 200px;
     background: url(images/mapLanes.jpg) no-repeat center;
     background-size: cover;
     border: solid #CB954A;
 }
 
 #map-page, .cards-lanes-container {padding-top: 3.5%;}
+
+.cards-lanes-container {
+    /* background-color: aquamarine; */
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
 
 .cards-lanes-container h1 {padding-bottom: 2%;}
 
@@ -196,3 +202,6 @@ footer .made-it {display: none;}
     justify-content: space-around;
     flex-wrap: wrap;
 }
+
+/*--------- DOM ---------*/
+.hidden {display: none;}
