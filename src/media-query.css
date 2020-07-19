@@ -1,5 +1,8 @@
 /*--------- Estilos Tablet ---------*/
 @media only screen and (min-width:768px){
+
+    /* header {position: fixed;} */
+
     .title-page {background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0)50%);}
 
     .polygon-title {clip-path: polygon(0 4%, 20% 4%, 25% 29%, 75% 29%, 80% 4%, 100% 4%, 100% 71%, 80% 71%, 75% 96%, 25% 96%, 20% 71%, 0 71%);} 
@@ -9,45 +12,67 @@
         font-size: 2em;
         padding: 3% 0 1% 0;
     }
+
+    main::-webkit-scrollbar{
+        width: 10px;
+        background: #414141;
+    }
+
+    main::-webkit-scrollbar-thumb{
+        background: #9c9c9c;
+        border-radius: 7px;
+    }
     
-    #champions-page {padding: 3%;}
+    .search-filter-container {
+        width: 100%;
+        position: fixed;
+        background-image: linear-gradient(rgb(0, 0, 0)80%, rgba(18, 17, 41, 0));
+    }
     
     .search-filter {
-       width: 80%;
-       margin: auto;
-       border: solid #523D24;
+        width: 80%;
+        margin: auto;
+        border: solid #523D24;
+        position: initial;
+        background-color: rgba(242, 229, 214, 0.16);
+        margin-top: 3%;
+        margin-bottom:3%;
     }
 
     .filter-input, .search::placeholder {font-size: 1.2em;}
     
+    .card-champions {padding: 15% 0 40% 0;}
+
     .card {
         width:250px; 
         min-height:300px;
     }
 
     .name-title-container h2 {font-size: 2em;}
-     
+
     .name-title-container p {
         font-size: 1em;
         padding-bottom: 7%;
     }
     
- /*  #nav-mobile-tablet li {font-size: 1.1em;}
+/*  #nav-mobile-tablet li {font-size: 1.1em;}
     #nav-mobile-tablet ul {height: 7%;} */
 }
 
 /*--------- Estilos Desktop ---------*/
 @media only screen and (min-width:1025px){
-    #nav-mobile-tablet, .polygon-title h1, .filter-select{display: none;}
+    #nav-mobile-tablet, .polygon-title h1 {display: none;}
 
     main {
         background-repeat: no-repeat;
         background-size: cover;
+        overflow-y: hidden;
+        /* height: 80%; */
     }
 
     /* Header */
     .header {height: 20vh;}
-      
+
     .logo-Lol {
         width: 15%;
         height: 15%;
@@ -92,20 +117,26 @@
     }
 
     /* Champions Section */
-    #champions-page{height: 74vh; padding-top: 3%;} /*[--> Para definir el alto según viewport]*/
+    #champions-page{height: 74vh; padding-top: 3.5%;}
 
     .title-page-desktop {display: block;}
     h1.title-page-desktop {font-size: 2.3em;}
-    p.title-page-desktop {font-size: 1em; padding-top: 0.5%;}
+    p.title-page-desktop {font-size: 1em; padding-top: 1%;}
     
     /* Search*/
-    .filter-tags-desktop {display: block;}
+    /* .filter-tags-desktop {display: block;} */
 
     .search-filter-cards {
         display: flex;
-        margin-top: 2%;
+        margin: 3% 3% 0 3%;
         justify-content: space-around;
         align-self: flex-start;
+    }
+
+    .search-filter-container {
+        width: 15%;
+        position: initial;
+        background-image: none;
     }
 
     .search-filter {
@@ -115,9 +146,10 @@
         background-color: transparent;
         border-style: none;
         justify-content: flex-start;
-        width: 15%;
+        width: 100%;
         padding: 0;
         margin: 0;
+        position: initial;
     }
 
     .filter-input, .search-input {
@@ -127,19 +159,19 @@
         margin-bottom:10%;
     }
 
-    .search {background-color: rgba(242, 229, 214, 0.16);}
-   
-    .filter-tags-desktop, .roles{
+    .search, .filter-input {background-color: rgba(242, 229, 214, 0.16);}
+
+    /* .filter-tags-desktop, .roles{
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         font-family: 'Merriweather';
-    } 
+    }   .filter-tags-desktop {display: block;} 
 
     .filter-tags-desktop h2 {color: #E9CA7B; font-size: 1.5em;}
     .filter-tags-desktop div {color: #F2E5D6; font-size: 1em;}
 
-    .roles {padding-top: 5%;} 
+    .roles {padding-top: 5%;} */
 
     /* Cards */
     .card {
@@ -153,7 +185,7 @@
         width: 80%;
         overflow:auto;
         overflow-x: hidden;
-        max-height: 480px;  
+        max-height: 350px;  
     }
 
     .card-champions::-webkit-scrollbar{
