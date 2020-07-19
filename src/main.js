@@ -1,12 +1,49 @@
 import data from './data/lol/lol.js';
 import {searchData, sortData, filterData, computeStats} from './data.js';
+
 let lolData = Object.values(data.data);
 let rolTop = [];
 
 let championsCards = document.querySelector('.card-champions');
+let championsCardsLanes = document.querySelector('.card-champions-lanes');
 let selectRoles = document.querySelector('.roles-select');
 let searchChampions = document.querySelector('.search');
 let sortSelect = document.querySelector('.sort-select');
+
+/*------ Changing Pages -------*/
+
+const buttonLane = document.getElementById('lanes-button');
+const buttonLaneMob = document.getElementById('lanes-button-mob');
+const buttonChampions = document.getElementById('champions-button');
+const buttonChampionsMob = document.getElementById('champions-button-mob');
+
+const championsPage = document.getElementById('champions-page');
+const lanesPage = document.getElementById('map-page');
+
+buttonLane.addEventListener('click', showLane);
+buttonLaneMob.addEventListener('click', showLane);
+buttonChampions.addEventListener('click', showChampions);
+buttonChampionsMob.addEventListener('click', showChampions);
+
+function showLane(){
+  lanesPage.classList.remove('hidden');
+  championsPage.classList.add('hidden');
+}
+function showChampions(){
+  championsPage.classList.remove('hidden');
+  lanesPage.classList.add('hidden');
+}
+
+/* buttonChampions.addEventListener('click', (e) =>{
+  championsPage.classList.remove('hidden');
+  lanesPage.classList.add('hidden');
+});
+buttonLane.addEventListener('click', (e) =>{
+  lanesPage.classList.remove('hidden');
+  championsPage.classList.add('hidden');
+}); */
+
+/*------ Creating Cards -------*/
 
 const showingChamps = (data) =>{
 const attribute = data.map(champions=> `
@@ -21,12 +58,13 @@ const attribute = data.map(champions=> `
   ).join('');
 
 championsCards.innerHTML= attribute;
+championsCardsLanes.innerHTML= attribute;
 };
 
 window.onload = function(){showingChamps(lolData)}
 
-
 /*------ Searchig names -------*/
+
 searchChampions.addEventListener('keyup', searching);
 function searching (){
   let champName = event.target.value;
@@ -78,7 +116,6 @@ function stats (){
     computeStats(rolTop)
     showingChamps(computeStats(rolTop))
   }
-
   if (lane ==='Top'){
     let firstRol = filterData(lolData,'Fighter');
     let secondRol = filterData(lolData,'Tank');

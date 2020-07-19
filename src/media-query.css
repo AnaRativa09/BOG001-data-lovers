@@ -1,8 +1,6 @@
 /*--------- Estilos Tablet ---------*/
 @media only screen and (min-width:768px){
 
-    /* header {position: fixed;} */
-
     .title-page {background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0)50%);}
 
     .polygon-title {clip-path: polygon(0 4%, 20% 4%, 25% 29%, 75% 29%, 80% 4%, 100% 4%, 100% 71%, 80% 71%, 75% 96%, 25% 96%, 20% 71%, 0 71%);} 
@@ -53,6 +51,15 @@
     .name-title-container p {
         font-size: 1em;
         padding-bottom: 7%;
+    }
+
+    /* LANES PAGE*/
+    .lanes-container { 
+        width: 80%;
+        flex-direction: row;;
+        justify-content: space-around;
+        margin: auto;
+        text-align: left;
     }
     
 /*  #nav-mobile-tablet li {font-size: 1.1em;}
@@ -118,15 +125,12 @@
 
     /* Champions Section */
     #champions-page{height: 74vh; padding-top: 3.5%;}
-
-    .title-page-desktop {display: block;}
-    h1.title-page-desktop {font-size: 2.3em;}
-    p.title-page-desktop {font-size: 1em; padding-top: 1%;}
+    #champions-title {display: block;}
     
     /* Search*/
     /* .filter-tags-desktop {display: block;} */
 
-    .search-filter-cards {
+    .search-cards-container {
         display: flex;
         margin: 3% 3% 0 3%;
         justify-content: space-around;
@@ -222,4 +226,15 @@
     
     #nav-social-media li {margin: 0 10%;}
     #nav-social-media i {font-size: 2em;}
+
+    /* LANES PAGE*/
+    .lanes-container {width: 50%;}
+
+    .cards-lanes-container h1 {
+        text-align: left;
+        margin-left: 2%;}
+
+    .mapSummonerRift{
+        width: 460px;
+        height: 400px;
 }  

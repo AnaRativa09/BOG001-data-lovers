@@ -48,7 +48,7 @@ header {
     padding: 8% 0 1% 0;
 }
 
-#nav-desktop, .title-page-desktop, .imageL, .filter-tags-desktop {display: none;}
+#nav-desktop, .imageL, .filter-tags-desktop {display: none;}
 
 /*--------- Estilos Search + Filter ---------*/
 .search-filter {
@@ -98,6 +98,7 @@ header {
 
 /*--------- Estilos Section Champions + Cards ---------*/
 #champions-page {box-sizing: border-box;}
+#champions-title {display:none}
 
 .card-champions {
     display: flex;
@@ -112,7 +113,7 @@ header {
     width:150px; 
     min-height:200px;
     margin-bottom: 5%;
-    border: 3px solid #CB954A;
+    border: solid #CB954A;
     background-position: center;
     background-size: cover;
 }
@@ -160,5 +161,38 @@ footer .made-it {display: none;}
 #nav-social-media {display: none;}
 
 /*--------- DOM ---------*/
-
 .hidden {display: none;}
+
+/*--------- ESTILOS LANES ---------*/
+.title-page-container h1 {font-size: 2.3em;}
+.title-page-container p {font-size: 1em; padding-top: 1%;}
+
+.lanes-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: green; */
+}
+
+.filter-lane {
+    margin: 3% 0;
+}
+
+.mapSummonerRift{
+    width: 360px;
+    height: 300px;
+    background: url(images/mapLanes.jpg) no-repeat center;
+    background-size: cover;
+    border: solid #CB954A;
+}
+
+#map-page, .cards-lanes-container {padding-top: 3.5%;}
+
+.cards-lanes-container h1 {padding-bottom: 2%;}
+
+/* Cards Top 5*/
+.card-champions-lanes{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
