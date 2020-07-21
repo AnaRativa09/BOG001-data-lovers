@@ -1,8 +1,6 @@
 /*--------- Estilos Tablet ---------*/
 @media only screen and (min-width:768px){
 
-    /* header {position: fixed;} */
-
     .title-page {background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0)50%);}
 
     .polygon-title {clip-path: polygon(0 4%, 20% 4%, 25% 29%, 75% 29%, 80% 4%, 100% 4%, 100% 71%, 80% 71%, 75% 96%, 25% 96%, 20% 71%, 0 71%);} 
@@ -54,11 +52,41 @@
         font-size: 1em;
         padding-bottom: 7%;
     }
+
+    /* LANES PAGE*/
+    
+    .title-page-container h1 {font-size: 2.3em;}
+    .title-page-container p {font-size: 1em; padding-top: 1%;}
+    .lanes-container, .all-up { 
+        width: 80%;
+        flex-direction: row;;
+        justify-content: space-around;
+        margin: auto;
+        text-align: left;
+    }
+
+    .mapSummonerRift{
+        width: 360px;
+        height: 300px;
+    }
+    .card-champions-lanes{
+        padding-bottom: 45%;
+    }
     
 /*  #nav-mobile-tablet li {font-size: 1.1em;}
     #nav-mobile-tablet ul {height: 7%;} */
-}
 
+    /* HOME PAGE*/
+    .all-up iframe{
+        height: 300px;
+        width: 400px;
+    }
+    .myChart{
+        width: 580px;
+        height: 540px;
+        padding-bottom: 45%;
+    }
+}
 /*--------- Estilos Desktop ---------*/
 @media only screen and (min-width:1025px){
     #nav-mobile-tablet, .polygon-title h1 {display: none;}
@@ -66,7 +94,7 @@
     main {
         background-repeat: no-repeat;
         background-size: cover;
-        overflow-y: hidden;
+        overflow-y: scroll;
         /* height: 80%; */
     }
 
@@ -118,15 +146,10 @@
 
     /* Champions Section */
     #champions-page{height: 74vh; padding-top: 3.5%;}
-
-    .title-page-desktop {display: block;}
-    h1.title-page-desktop {font-size: 2.3em;}
-    p.title-page-desktop {font-size: 1em; padding-top: 1%;}
+    #champions-title {display: block;}
     
     /* Search*/
-    /* .filter-tags-desktop {display: block;} */
-
-    .search-filter-cards {
+    .search-cards-container {
         display: flex;
         margin: 3% 3% 0 3%;
         justify-content: space-around;
@@ -161,31 +184,65 @@
 
     .search, .filter-input {background-color: rgba(242, 229, 214, 0.16);}
 
-    /* .filter-tags-desktop, .roles{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        font-family: 'Merriweather';
-    }   .filter-tags-desktop {display: block;} 
-
-    .filter-tags-desktop h2 {color: #E9CA7B; font-size: 1.5em;}
-    .filter-tags-desktop div {color: #F2E5D6; font-size: 1em;}
-
-    .roles {padding-top: 5%;} */
-
     /* Cards */
     .card {
         width:180px; 
         min-height: 200px;
-        margin: 0 0 2% 2%;
-    } 
-
+        /* margin: 0 0 2% 2%; */
+    }    
     .card-champions {
         padding: 0 0 0 0;
         width: 80%;
         overflow:auto;
         overflow-x: hidden;
-        max-height: 350px;  
+        max-height: 380px;  
+    }
+
+    .card-modal{
+        position: fixed;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        border: 2px solid #523D24;
+        background-color:black;
+        width: 600px;
+        max-width: 80%;
+        padding-bottom: 10px;
+        z-index: 10px;
+    }
+    
+    .card-modal.active{
+        transform: translate(-50%, -50%) scale(1);
+    }
+    
+    .title-modal{
+        padding: 10px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-bottom: 2px solid #523D24;
+    }
+    .container-modal{
+        display: flex;
+        align-items: center;
+    }
+    
+    .title-modal h1{
+        font-size: 2em;
+        color: #E9CA7B;
+    }
+    
+    .title-modal .close-modal{
+        cursor: pointer;
+        background: none;
+        border: none;
+        font-weight: bold;
+        font-size: 1.8em;
+        color: #E9CA7B;
+    }
+    
+    .attribute-list{
+        list-style-type:none;
     }
 
     .card-champions::-webkit-scrollbar{
@@ -222,4 +279,44 @@
     
     #nav-social-media li {margin: 0 10%;}
     #nav-social-media i {font-size: 2em;}
-}  
+
+    /* LANES PAGE*/
+    #map-page{padding-top: 1.5%;}
+    .cards-lanes-container {padding-top: 0;}
+    .lanes-container, .all-up {width: 50%;}
+
+    .cards-lanes-container h1 {
+        text-align: left;
+        margin-left: 5%;
+        
+    }
+    .card-champions-lanes {
+        padding-bottom: 20%
+    }
+    .mapSummonerRift {
+        width: 360px;
+        height: 300px;
+    } 
+
+    .home-page-container {
+        display: flex;
+        align-items: center;
+        width: 90%;
+        margin: auto;
+    }
+    .all-up{
+        width: 70%;
+    }
+
+    iframe{
+        width: 560px;
+        height: 315px;
+    }
+
+    .myChart{
+        width: 300px;
+        height: 200px;
+        padding-bottom: 10%;
+    }
+    .p-desk{display:block;}
+}

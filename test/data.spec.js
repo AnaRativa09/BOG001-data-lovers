@@ -105,13 +105,3 @@ describe('computeStats', () => {
     expect(computeStats(information)).toEqual(output);
   });
 });
-
-describe('computeStats', () => {
-  it('is a function', () => {
-    expect(typeof computeStats).toBe('function');
-  });
-
-  it.skip('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });
-});

@@ -48,7 +48,7 @@ header {
     padding: 8% 0 1% 0;
 }
 
-#nav-desktop, .title-page-desktop, .imageL, .filter-tags-desktop {display: none;}
+#nav-desktop, .imageL {display: none;}
 
 /*--------- Estilos Search + Filter ---------*/
 .search-filter {
@@ -98,6 +98,7 @@ header {
 
 /*--------- Estilos Section Champions + Cards ---------*/
 #champions-page {box-sizing: border-box;}
+#champions-title {display:none}
 
 .card-champions {
     display: flex;
@@ -111,11 +112,29 @@ header {
     align-items: flex-end; 
     width:150px; 
     min-height:200px;
-    margin-bottom: 5%;
-    border: 3px solid #CB954A;
+    margin-bottom: 2%;
+    border: solid #CB954A;
     background-position: center;
     background-size: cover;
 }
+
+
+/* 
+.overlay {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+}
+.overlay.active {
+    opacity: 1;
+    pointer-events: all;
+} */
+
 
 .name-title-container {
     width: 100%;
@@ -159,6 +178,64 @@ footer .made-it {display: none;}
 
 #nav-social-media {display: none;}
 
-/*--------- DOM ---------*/
+/*--------- ESTILOS LANES ---------*/
+.title-page-container h1 {font-size: 1.5em;}
+.title-page-container p {font-size: 1em; padding-top: 1%;}
 
+.lanes-container, .all-up {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.filter-lane {
+    margin: 3% 0;
+}
+
+.mapSummonerRift{
+    width: 260px;
+    height: 200px;
+    background: url(images/mapLanes.jpg) no-repeat center;
+    background-size: cover;
+    border: solid #CB954A;
+}
+
+#map-page, #home-page, .cards-lanes-container {padding-top: 3.5%;}
+
+.cards-lanes-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.cards-lanes-container h1 {padding-bottom: 2%;}
+
+/* Cards Top 5*/
+.card-champions-lanes{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-bottom: 58%;
+}
+/*--------- HomePage ---------*/
+.all-up{
+    width: 80%;
+    margin: auto;
+}
+.all-up iframe {
+    margin: 2% 0;
+}
+.myChart{
+    width: 300px;
+    height: 300px;
+    color:#F2E5D6;
+    font-size: 1em;
+    font-weight: bold;
+    margin: auto;
+    padding-bottom:75%;
+} 
+.p-desk{display:none;}
+/*--------- DOM ---------*/
 .hidden {display: none;}
