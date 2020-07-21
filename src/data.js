@@ -19,7 +19,6 @@ export const filterData = (lolData,rol) => {
 /*------ Sorting -------*/
 
 export const sortData = (lolData,order)=>{
-
   let dataSort = lolData.sort(function(a,z){
     if(a.name > z.name){return 1;}
     else {return -1;}
@@ -48,3 +47,12 @@ export const computeStats = (lolData) => {
   return topFive
 }
 
+/*------ % -------*/
+export const attributes = (lolData) => {
+  let infoAttribute =lolData.map(function(attr){
+    let information = attr.info
+    let sum = information.attack + information.magic + information.defense + information.difficulty
+    let prom = sum/4
+    return Object.defineProperty(attr, 'prom',{value:prom, enumerable:true})
+  });
+}
