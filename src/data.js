@@ -46,13 +46,3 @@ export const computeStats = (lolData) => {
   let topFive = order.slice(0,5)
   return topFive
 }
-
-/*------ % -------*/
-export const attributes = (lolData) => {
-  let infoAttribute =lolData.map(function(attr){
-    let information = attr.info
-    let sum = information.attack + information.magic + information.defense + information.difficulty
-    let prom = sum/4
-    return Object.defineProperty(attr, 'prom',{value:prom, enumerable:true})
-  });
-}

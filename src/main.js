@@ -98,7 +98,7 @@ const attribute = data.map(champions=> `
 
 window.onload = function(){showingChamps(lolData)}
 
-window.cardModal = cardModal
+/* window.cardModal = cardModal ----> Intento Modal
 function cardModal (id) {  
   let cardModal = document.getElementById("cardModal"+ id);
   console.log(cardModal)
@@ -106,13 +106,13 @@ function cardModal (id) {
   overlay.classList.remove('hidden');
 }
 console.log(lolData.id)
-
+ */
 
 /* -----Charts ---- */
 const ctx = document.getElementById('myChart').getContext('2d');
 Chart.defaults.global.defaultFontColor = '#cb954a';
 
-let myChart = new Chart(ctx, {
+const myChart = new Chart(ctx, {
     type: 'bar',
     data: {
         labels: ['Assassins','Marksmans', 'Supports', 'Fighters', 'Mages', 'Tanks'],
@@ -159,13 +159,6 @@ let myChart = new Chart(ctx, {
 
 
 
-
-
-
-
-
-
-
 /*------ Searchig names -------*/
 searchChampions.addEventListener('keyup', searching);
 function searching (){
@@ -180,6 +173,7 @@ function searching (){
     showingChamps(searchingChamp)
   }
 } 
+
 /*-------- Filter Select (mobile/tablet/desktop) -------- */
 selectRoles.addEventListener('change', checkRoles);
 function checkRoles(event){
