@@ -19,7 +19,6 @@ export const filterData = (lolData,rol) => {
 /*------ Sorting -------*/
 
 export const sortData = (lolData,order)=>{
-
   let dataSort = lolData.sort(function(a,z){
     if(a.name > z.name){return 1;}
     else {return -1;}
@@ -47,4 +46,3 @@ export const computeStats = (lolData) => {
   let topFive = order.slice(0,5)
   return topFive
 }
-

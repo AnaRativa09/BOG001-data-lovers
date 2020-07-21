@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="style.css"/>
     <link rel="stylesheet" href="media-query.css"/>
     <script src="https://kit.fontawesome.com/0b32af8212.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script>
+    
   </head>
 
   <body>
@@ -25,7 +27,7 @@
                 <li class="home-play"><a href="https://signup.lan.leagueoflegends.com/es/signup/index#/" target="_blank">Play</a></li>
               </ul>
             </nav>
-            <h1 class="title-page-name">LANES</h1>
+            <h1 class="title-page-name">CHAMPIONS</h1>
           </div>
         </div>
         <div class="imageL-container"></div>
@@ -34,9 +36,26 @@
 
     <main id="root">
       <section id="home-page" class="hidden">
+
+        <div class="home-page-container">
+          <div class="all-up">
+            <div class="title-page-container" >
+              <h1>STARTING WITH LOL</h1>
+              <p class ="p-desk">League of Legends is a team-based strategy game where two teams of five powerful champions face off to destroy the other’s base.</p>
+              <p> Make epic plays, secure kills, and take down towers to victory.</p>
+              
+            </div>
+            <iframe src="https://www.youtube.com/embed/BGtROJeMPeE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class = "myChart">
+            <h2>DISCOVER THE CHAMPIONS</h2>
+            <p>The number of champions per rol</p>
+            <canvas id="myChart" width="200" height="200"></canvas>
+          </div>
+        </div>
       </section>
       
-      <section id="champions-page" class="hidden">
+      <section id="champions-page" class="">
         <div class="title-page-container" id="champions-title">
           <h1>CHOOSE YOUR CHAMPION</h1>
           <p>With more than 140 champions, you’ll find the perfect match for your playstyle.</p>
@@ -65,30 +84,18 @@
                 <option value="Tank">Tanks</option>
               </select>
 
-            <!--   <div class="filter-tags-desktop"> <!-- CHECKBOX ROLES
-                <h2>Roles</h2>
-                <div class='roles'>
-                  <label for="Assassins"><input type="checkbox" name="Assassins" id="Assassin"value="Assassin">Assassins</label>
-                  <label for="Marksman"><input type="checkbox" name="Marksman" id="Marksman" value="Marksman">Marksman</label>
-                  <label for="Supports"><input type="checkbox" name="Supports" id="Support" value="Support">Supports</label>
-                  <label for="Fighters"><input type="checkbox" name="Fighters" id="Fighter" value="Fighter">Fighters</label>
-                  <label for="Mages"><input type="checkbox" name="Mages" id="Mage" value="Mage">Mages</label>
-                  <label for="Tanks"><input type="checkbox" name="Tanks" id="Tank" value="Tank">Tanks</label>
-                </div>
-              </div> -->
             </div>
           </div>
-
           <section class="card-champions"></section>
         </div>
       </section>
-
-      <section id="map-page" class="">
+      
+      <section id="map-page" class="hidden">
         <div class="lanes-container">
           <div class="title-select">
             <div class="title-page-container">
-              <h1 class="">CHOOSE YOUR LANE</h1>
-              <p class="">Meet the <strong>best 5</strong> champions for each lane</p>
+              <h1>CHOOSE YOUR LANE</h1>
+              <p>Meet the <strong>best 5</strong> champions for each lane</p>
             </div>
             <select class="filter-input filter-lane"> <!-- SELECT LANES -->
               <option value="Lanes">Lanes</option>
@@ -102,7 +109,7 @@
         </div>
         
         <div class="cards-lanes-container">
-          <h1>Top 5 <span class="roles-lanes"></span></h1>
+          <h1>Top 5 <span class="roles-lanes">: All Champions</span></h1>
           <section class="card-champions-lanes"></section>
         </div>
           
@@ -125,7 +132,9 @@
             <p>Lanes</p>
           </li> 
           <li class="play-menu">
-            <img src="images/gameIcon.svg" alt="Icon Play">
+            <a href="https://signup.lan.leagueoflegends.com/es/signup/index#/" target="_blank">
+              <img src="images/gameIcon.svg" alt="Icon Play">
+            </a>
             <p>Play</p>
           </li>
         </ul>
