@@ -36,6 +36,7 @@ export const computeStats = (lolData) => {
     let information = attr.info
     let sum = information.attack + information.magic + information.defense + information.difficulty
     let prom = sum/4
+    // attr[prom] = prom
     return Object.defineProperty(attr, 'prom',{value:prom, enumerable:true})
   });
   let order = infoAttribute.sort(function(a,b){
