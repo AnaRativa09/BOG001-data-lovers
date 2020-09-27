@@ -13,10 +13,8 @@
 ## 1. Descripción del proyecto
 **DataLovers LoL** es una interfaz que permite a los jugadores principiantes de LoL conocer los diferentes tipos de campeones con sus roles y habilidades, definiendo cuáles son los más convenientes para sus partidas. Además, los usuarios pueden descubrir los cinco mejores campeones para cada uno de los carriles de la Grieta del Invocador.
 
-<img width="200px" src="src/images/README/lol1.jpg">
-<img width="200px" src="src/images/README/lol3.jpg">
-<img width="600px" src="src/images/README/lol2.jpg">
-<img width="600px" src="src/images/README/lol4.jpg">
+<p align="center"> <img width="200px" src="src/images/README/lol1.jpg"> <img width="200px" src="src/images/README/lol3.jpg"> </p>
+<p align="center"> <img width="600px" src="src/images/README/lol2.jpg"> <img width="600px" src="src/images/README/lol4.jpg"> </p>
 
 ## 2. Historias de Usuario
 
@@ -27,19 +25,17 @@
 
 ## 3. Prototipos de baja fidelidad
 * Prototipos vista "Champions"
-<img width="450px" src="src/images/README/lolPrototipo1.jpg">
-<img width="450px" src="src/images/README/lolPrototipo3.jpg">
+<p align="center"> <img width="450px" src="src/images/README/lolPrototipo1.jpg"> <img width="447px" src="src/images/README/lolPrototipo3.jpg"> </p>
 
 * Prototipos para vista "Lanes"
-<img width="450px" src="src/images/README/lolPrototipo2.jpg">
-<img width="450px" src="src/images/README/lolPrototipo4.jpg">
+<p align="center"> <img width="450px" src="src/images/README/lolPrototipo2.jpg"> <img width="394px" src="src/images/README/lolPrototipo4.jpg"></p>
 
 ## 4. Prototipos de alta fidelidad
 * Diseño en Figma: https://www.figma.com/file/MH6S9Ab3NwSiCSa0f35qXp/LoL?node-id=0%3A1
 * Prototipo vista "Champions"
-<img width="600px" src="src/images/README/lolFigmaChampions.jpg">
+<p align="center"><img width="600px" src="src/images/README/lolFigmaChampions.jpg"></p>
 * Prototipo vista "Lanes"
-<img width="600px" src="src/images/README/lolFigmaLanes.jpg">
+<p align="center"><img width="600px" src="src/images/README/lolFigmaLanes.jpg"></p>
 
 ## 5. Test de Usabilidad
 Mediante los test de usabilidad logramos identificar diferentes problemas sobre los cuales se iteró hasta lograr una interfaz intuituva y agradable para el usuario.
